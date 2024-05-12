@@ -11,6 +11,8 @@ import SnapKit
 
 final class HomeView: UIView {
     
+    // MARK: - UI
+    
     private lazy var calendar: FSCalendar = {
         let calendar = FSCalendar(frame: .zero)
         calendar.backgroundColor = .white
@@ -24,9 +26,28 @@ final class HomeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure
+    
+    private func configure() {
+        self.backgroundColor = .white
+        
+        self.makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        self.addSubview(self.calendar)
+        
+        self.calendar.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(20)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalToSuperview().multipliedBy(0.5)
+        }
     }
 }
