@@ -14,12 +14,12 @@
 		1CB069032BED3D240086B88F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1CB069022BED3D240086B88F /* Base */; };
 		1CB069102BED48170086B88F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0690F2BED48170086B88F /* HomeView.swift */; };
 		1CB069132BED48720086B88F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB069122BED48720086B88F /* SnapKit */; };
-		1CB069152BED48720086B88F /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB069142BED48720086B88F /* SnapKit-Dynamic */; };
 		1CB069182BED489B0086B88F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB069172BED489B0086B88F /* FSCalendar */; };
 		1CB069202BF2528F0086B88F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0691F2BF2528F0086B88F /* HomeViewController.swift */; };
 		1CB069252BF254F70086B88F /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CB069232BF254F70086B88F /* Cafe24Ssurround.ttf */; };
 		1CB069262BF254F70086B88F /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CB069242BF254F70086B88F /* Cafe24SsurroundAir.ttf */; };
 		1CB069292BF25A000086B88F /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB069282BF25A000086B88F /* Typography.swift */; };
+		1CB0692B2BF26F560086B88F /* IconImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0692A2BF26F560086B88F /* IconImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +35,7 @@
 		1CB069232BF254F70086B88F /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssurround.ttf; sourceTree = "<group>"; };
 		1CB069242BF254F70086B88F /* Cafe24SsurroundAir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24SsurroundAir.ttf; sourceTree = "<group>"; };
 		1CB069282BF25A000086B88F /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		1CB0692A2BF26F560086B88F /* IconImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +45,6 @@
 			files = (
 				1CB069132BED48720086B88F /* SnapKit in Frameworks */,
 				1CB069182BED489B0086B88F /* FSCalendar in Frameworks */,
-				1CB069152BED48720086B88F /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB069282BF25A000086B88F /* Typography.swift */,
+				1CB0692A2BF26F560086B88F /* IconImages.swift */,
 			);
 			path = Values;
 			sourceTree = "<group>";
@@ -151,7 +152,6 @@
 			name = LivingFriend;
 			packageProductDependencies = (
 				1CB069122BED48720086B88F /* SnapKit */,
-				1CB069142BED48720086B88F /* SnapKit-Dynamic */,
 				1CB069172BED489B0086B88F /* FSCalendar */,
 			);
 			productName = LivingFriend;
@@ -219,6 +219,7 @@
 				1CB069102BED48170086B88F /* HomeView.swift in Sources */,
 				1CB068F72BED3D220086B88F /* AppDelegate.swift in Sources */,
 				1CB069292BF25A000086B88F /* Typography.swift in Sources */,
+				1CB0692B2BF26F560086B88F /* IconImages.swift in Sources */,
 				1CB068F92BED3D220086B88F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,11 +458,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1CB069112BED48720086B88F /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		1CB069142BED48720086B88F /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1CB069112BED48720086B88F /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		1CB069172BED489B0086B88F /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
