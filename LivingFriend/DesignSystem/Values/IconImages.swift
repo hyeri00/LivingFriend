@@ -8,10 +8,18 @@
 import UIKit
 
 enum IconImages {
+    
+    case home
+    case show
+    
     case search
     
     var image: UIImage? {
         switch self {
+        case .home:
+            return UIImage(named: "icon_home")
+        case .show:
+            return UIImage(named: "icon_show")
         case .search:
             return UIImage(named: "icon_search")
         }
