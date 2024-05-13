@@ -17,6 +17,8 @@
 		1CB069152BED48720086B88F /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB069142BED48720086B88F /* SnapKit-Dynamic */; };
 		1CB069182BED489B0086B88F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB069172BED489B0086B88F /* FSCalendar */; };
 		1CB069202BF2528F0086B88F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0691F2BF2528F0086B88F /* HomeViewController.swift */; };
+		1CB069252BF254F70086B88F /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CB069232BF254F70086B88F /* Cafe24Ssurround.ttf */; };
+		1CB069262BF254F70086B88F /* Cafe24SsurroundAir.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CB069242BF254F70086B88F /* Cafe24SsurroundAir.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		1CB069042BED3D240086B88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CB0690F2BED48170086B88F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1CB0691F2BF2528F0086B88F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1CB069232BF254F70086B88F /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssurround.ttf; sourceTree = "<group>"; };
+		1CB069242BF254F70086B88F /* Cafe24SsurroundAir.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24SsurroundAir.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB0690B2BED45420086B88F /* Presentation */,
+				1CB069212BF254A30086B88F /* DesignSystem */,
 				1CB068F62BED3D220086B88F /* AppDelegate.swift */,
 				1CB068F82BED3D220086B88F /* SceneDelegate.swift */,
 				1CB068FA2BED3D220086B88F /* ViewController.swift */,
@@ -98,6 +103,23 @@
 				1CB0690F2BED48170086B88F /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1CB069212BF254A30086B88F /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				1CB069222BF254E40086B88F /* Font */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		1CB069222BF254E40086B88F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1CB069232BF254F70086B88F /* Cafe24Ssurround.ttf */,
+				1CB069242BF254F70086B88F /* Cafe24SsurroundAir.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +189,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB069262BF254F70086B88F /* Cafe24SsurroundAir.ttf in Resources */,
 				1CB069002BED3D240086B88F /* Assets.xcassets in Resources */,
+				1CB069252BF254F70086B88F /* Cafe24Ssurround.ttf in Resources */,
 				1CB069032BED3D240086B88F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
