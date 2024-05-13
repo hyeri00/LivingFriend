@@ -24,6 +24,24 @@ final class HomeView: UIView {
         calendar.backgroundColor = .white
         
         calendar.locale = Locale(identifier: "ko_KR")
+        calendar.placeholderType = .none
+        
+        // header
+        calendar.appearance.headerMinimumDissolvedAlpha = 0.0
+        calendar.appearance.headerDateFormat = "YYYY년 MM월"
+        calendar.appearance.headerTitleFont = Font.Typography.bold18
+        calendar.appearance.headerTitleColor = .black
+        calendar.headerHeight = 68
+        
+        // week
+        calendar.appearance.weekdayFont = Font.Typography.air14
+        calendar.appearance.weekdayTextColor = .black
+        
+        calendar.appearance.titleFont = Font.Typography.air14
+        
+        calendar.appearance.selectionColor = .lightGray
+        calendar.appearance.todayColor = .darkGray
+        
         return calendar
     }()
     
