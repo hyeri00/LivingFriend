@@ -45,6 +45,12 @@ final class HomeView: UIView {
         return calendar
     }()
     
+    private let searchButton: UIButton = {
+        let button = UIButton()
+        button.setImage(IconImages.search.image, for: .normal)
+        return button
+    }()
+    
     // MARK: - Initialize
     
     override init(frame: CGRect) {
