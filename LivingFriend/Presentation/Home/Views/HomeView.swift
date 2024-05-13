@@ -55,6 +55,12 @@ final class HomeView: UIView {
         return button
     }()
     
+    private let plusButton: UIButton = {
+        let button = UIButton()
+        button.setImage(IconImages.plus.image, for: .normal)
+        return button
+    }()
+    
     // MARK: - Initialize
     
     override init(frame: CGRect) {
