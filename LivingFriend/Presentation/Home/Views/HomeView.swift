@@ -11,6 +11,12 @@ import SnapKit
 
 final class HomeView: UIView {
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let calendarTopMargin: CGFloat = 20
+    }
+    
     // MARK: - UI
     
     private lazy var calendar: FSCalendar = {
@@ -45,7 +51,7 @@ final class HomeView: UIView {
         self.addSubview(self.calendar)
         
         self.calendar.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(20)
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Metric.calendarTopMargin)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalToSuperview().multipliedBy(0.5)
         }
