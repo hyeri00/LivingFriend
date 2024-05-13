@@ -15,6 +15,7 @@ enum IconImages {
     case search
     
     case plus
+    case back
     
     var image: UIImage? {
         switch self {
@@ -26,6 +27,8 @@ enum IconImages {
             return UIImage(named: "icon_search")
         case .plus:
             return UIImage(named: "icon_plus")
+        case .back:
+            return UIImage(named: "icon_back")
         }
     }
 }
