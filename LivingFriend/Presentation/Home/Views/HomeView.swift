@@ -51,6 +51,7 @@ final class HomeView: UIView {
     private let searchButton: UIButton = {
         let button = UIButton()
         button.setImage(IconImages.search.image, for: .normal)
+        button.isHidden = true // TODO: - 기능 미구현
         return button
     }()
     
