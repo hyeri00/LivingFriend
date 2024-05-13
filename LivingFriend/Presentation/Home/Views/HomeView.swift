@@ -15,6 +15,9 @@ final class HomeView: UIView {
     
     private enum Metric {
         static let calendarTopMargin: CGFloat = 20
+        static let searchButtonTopMargin: CGFloat = 32
+        static let searchButtpnTrailingMargin: CGFloat = 25
+        static let searchButtonSize: CGFloat = 17
     }
     
     // MARK: - UI
@@ -73,11 +76,18 @@ final class HomeView: UIView {
     
     private func makeConstraints() {
         self.addSubview(self.calendar)
+        self.calendar.addSubview(self.searchButton)
         
         self.calendar.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Metric.calendarTopMargin)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalToSuperview().multipliedBy(0.5)
+            $0.height.equalToSuperview().multipliedBy(0.45)
+        }
+        
+        self.searchButton.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(Metric.searchButtonTopMargin)
+            $0.trailing.equalToSuperview().inset(Metric.searchButtpnTrailingMargin)
+            $0.width.height.equalTo(Metric.searchButtonSize)
         }
     }
 }
