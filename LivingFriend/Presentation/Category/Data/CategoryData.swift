@@ -16,11 +16,11 @@ struct CategoryData {
     static let shared = CategoryData()
     
     var categoryData: [CategoryItem] = [
-        CategoryItem.item(id: 01, image: IconImages.appliance.image!, title: "정수기 필터"),
-        CategoryItem.item(id: 02, image: IconImages.basin.image!, title: "세면대 필터"),
-        CategoryItem.item(id: 03, image: IconImages.shower.image!, title: "샤워기 필터"),
-        CategoryItem.item(id: 04, image: IconImages.washDishes.image!, title: "수세미 교체"),
-        CategoryItem.item(id: 05, image: IconImages.washingMachine.image!, title: "세탁조 클리너")
+        CategoryItem.item(id: 01, image: IconImages.appliance.image!, title: TextManager.category_appliance),
+        CategoryItem.item(id: 02, image: IconImages.basin.image!, title: TextManager.category_basin),
+        CategoryItem.item(id: 03, image: IconImages.shower.image!, title: TextManager.category_shower),
+        CategoryItem.item(id: 04, image: IconImages.washDishes.image!, title: TextManager.category_washDishes),
+        CategoryItem.item(id: 05, image: IconImages.washingMachine.image!, title: TextManager.category_washingMachine)
     ]
     
 //    mutating func addItem(image: UIImage, title: String) {
