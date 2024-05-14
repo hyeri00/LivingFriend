@@ -16,4 +16,9 @@ struct TextManager {
     static let category_washingMachine = "세탁조 클리너"
     
     static let manage_title = "관리 항목 추가"
+    
+    static let period_number = "30"
+    static let period_date = "일"
+    static let period_up = "+"
+    static let period_down = "-"
 }
