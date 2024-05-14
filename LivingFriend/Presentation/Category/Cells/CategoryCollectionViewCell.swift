@@ -9,6 +9,13 @@ import UIKit
 
 final class CategoryCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let imageSize: CGFloat = 80
+        static let labelTopSpacing: CGFloat = 10
+    }
+
     // MARK: - UI
     
     private let titleImage: UIImageView = {
@@ -24,4 +31,39 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
         label.font = Font.Typography.air12
         return label
     }()
+    
+    // MARK: - Initialize
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure
+    
+    private func configure() {
+        self.backgroundColor = .white
+        
+        self.makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        self.addSubview(self.titleImage)
+        self.addSubview(self.titleLabel)
+        
+        self.titleImage.snp.makeConstraints {
+            $0.width.height.equalTo(Metric.imageSize)
+            $0.centerX.centerY.equalToSuperview()
+        }
+        
+        self.titleLabel.snp.makeConstraints {
+            $0.top.equalTo(self.titleImage.snp.bottom).offset(Metric.labelTopSpacing)
+            $0.centerX.equalToSuperview()
+        }
+    }
 }
