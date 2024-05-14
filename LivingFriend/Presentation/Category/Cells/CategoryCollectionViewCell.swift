@@ -44,6 +44,16 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Bind
+    
+    func bind(
+        image: UIImage,
+        title: String
+    ) {
+        self.titleImage.image = image
+        self.titleLabel.text = title
+    }
+    
     // MARK: - Configure
     
     private func configure() {
