@@ -17,6 +17,12 @@ enum IconImages {
     case plus
     case back
     
+    case appliance
+    case basin
+    case shower
+    case washDishes
+    case washingMachine
+    
     var image: UIImage? {
         switch self {
         case .home:
@@ -29,6 +35,17 @@ enum IconImages {
             return UIImage(named: "icon_plus")
         case .back:
             return UIImage(named: "icon_back")
+            
+        case .appliance:
+            return UIImage(named: "icon_appliance")
+        case .basin:
+            return UIImage(named: "icon_basin")
+        case .shower:
+            return UIImage(named: "icon_shower-head")
+        case .washDishes:
+            return UIImage(named: "icon_washing-dishes")
+        case .washingMachine:
+            return UIImage(named: "icon_washing-machine")
         }
     }
 }
