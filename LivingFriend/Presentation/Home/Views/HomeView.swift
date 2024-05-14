@@ -11,6 +11,10 @@ import SnapKit
 
 final class HomeView: UIView {
     
+    // MARK: - Properties
+    
+    var didTapPlusButtonAction: (() -> Void)?
+
     // MARK: - Metric
     
     private enum Metric {
@@ -81,7 +85,14 @@ final class HomeView: UIView {
     private func configure() {
         self.backgroundColor = .white
         
+        self.addConfigure()
         self.makeConstraints()
+    }
+    
+    private func addConfigure() {
+        self.plusButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.didTapPlusButtonAction?()
+        }), for: .touchUpInside)
     }
     
     private func makeConstraints() {
