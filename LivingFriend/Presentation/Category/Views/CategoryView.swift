@@ -9,6 +9,12 @@ import UIKit
 
 final class CategoryView: UIView {
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let collectionViewTopMargin: CGFloat = 10
+    }
+
     // MARK: - UI
     
     private lazy var listCollectionView: UICollectionView = {
@@ -18,9 +24,37 @@ final class CategoryView: UIView {
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
-        
         view.register(CategoryCollectionViewCell.self,
                       forCellWithReuseIdentifier: "CategoryCollectionViewCell")
         return view
     }()
+    
+    // MARK: - Initialize
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure
+    
+    private func configure() {
+        self.backgroundColor = .white
+        
+        self.makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        self.addSubview(self.listCollectionView)
+        
+        self.listCollectionView.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Metric.collectionViewTopMargin)
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+    }
 }
