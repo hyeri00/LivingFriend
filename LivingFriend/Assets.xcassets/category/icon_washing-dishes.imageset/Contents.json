@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_washing-dishes.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
