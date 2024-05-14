@@ -20,6 +20,9 @@ enum Font: String {
         static let bold18 = setFont(font: .bold, fontSize: 18)
         static let air18 = setFont(font: .air, fontSize: 18)
         
+        static let bold16 = setFont(font: .bold, fontSize: 16)
+        static let air16 = setFont(font: .air, fontSize: 16)
+        
         static let bold14 = setFont(font: .bold, fontSize: 14)
         static let air14 = setFont(font: .air, fontSize: 14)
     
