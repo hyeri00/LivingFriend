@@ -14,7 +14,7 @@ final class CategoryView: UIView {
     private enum Metric {
         static let collectionViewTopMargin: CGFloat = 10
     }
-
+    
     // MARK: - UI
     
     private lazy var listCollectionView: UICollectionView = {
@@ -24,6 +24,8 @@ final class CategoryView: UIView {
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .white
+        view.delegate = self
+        view.dataSource = self
         view.register(CategoryCollectionViewCell.self,
                       forCellWithReuseIdentifier: "CategoryCollectionViewCell")
         return view
@@ -56,5 +58,47 @@ final class CategoryView: UIView {
             $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Metric.collectionViewTopMargin)
             $0.leading.trailing.bottom.equalToSuperview()
         }
+    }
+}
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+
+extension CategoryView: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int
+    ) -> Int {
+        return CategoryData.shared.categoryData.count
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "CategoryCollectionViewCell",
+            for: indexPath) as! CategoryCollectionViewCell
+        let item = CategoryData.shared.categoryData[indexPath.row]
+        
+        switch item {
+        case .item(_, let image, let title):
+            cell.bind(image: image, title: title)
+        }
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension CategoryView: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        return CGSize(width: 120, height: 120)
     }
 }
