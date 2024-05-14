@@ -20,4 +20,31 @@ final class HomeViewController: UIViewController {
         
         self.view = homeView
     }
+    
+    // MARK: - Initialize
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure
+    
+    private func configure() {
+        
+        self.addConfigure()
+    }
+    
+    private func addConfigure() {
+        self.homeView.didTapPlusButtonAction = { [weak self] in
+            let categoryViewController = UINavigationController(rootViewController: CategoryViewController())
+            categoryViewController.modalPresentationStyle = .overFullScreen
+            self?.present(categoryViewController, animated: true)
+        }
+    }
 }
