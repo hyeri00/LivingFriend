@@ -15,7 +15,7 @@ final class PeriodView: UIView {
         let label = UILabel()
         label.text = TextManager.period_number
         label.textColor = .black
-        label.font = Font.Typography.bold18
+        label.font = Font.Typography.bold30
         return label
     }()
     
@@ -23,7 +23,7 @@ final class PeriodView: UIView {
         let label = UILabel()
         label.text = TextManager.period_date
         label.textColor = .black
-        label.font = Font.Typography.bold18
+        label.font = Font.Typography.bold30
         return label
     }()
     
@@ -31,7 +31,7 @@ final class PeriodView: UIView {
         let button = UIButton()
         button.setTitle(TextManager.period_up, for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = Font.Typography.bold16
+        button.titleLabel?.font = Font.Typography.bold30
         return button
     }()
     
