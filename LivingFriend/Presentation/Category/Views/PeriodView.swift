@@ -39,7 +39,18 @@ final class PeriodView: UIView {
         let button = UIButton()
         button.setTitle(TextManager.period_down, for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = Font.Typography.bold16
+        button.titleLabel?.font = Font.Typography.bold30
+        return button
+    }()
+    
+    private let confirmButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("설정 완료", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = Font.Typography.air14
+        button.layer.cornerRadius = 12
+        button.backgroundColor = .black
+        button.clipsToBounds = true
         return button
     }()
 }
