@@ -53,4 +53,12 @@ final class PeriodView: UIView {
         button.clipsToBounds = true
         return button
     }()
+    
+    // MARK: - Counter Logic
+
+    private var number = 30 {
+        didSet {
+            numberLabel.text = "\(number)"
+        }
+    }
 }
