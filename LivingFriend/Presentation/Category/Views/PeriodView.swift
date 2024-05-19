@@ -9,6 +9,13 @@ import UIKit
 
 final class PeriodView: UIView {
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let basePadding: CGFloat = 30
+        static let confirmButtonHeight: CGFloat = 48
+    }
+    
     // MARK: - UI
     
     private let numberLabel: UILabel = {
@@ -55,10 +62,63 @@ final class PeriodView: UIView {
     }()
     
     // MARK: - Counter Logic
-
+    
     private var number = 30 {
         didSet {
             numberLabel.text = "\(number)"
+        }
+    }
+    
+    // MARK: - Initialize
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure
+    
+    private func configure() {
+        self.backgroundColor = .white
+        
+        self.makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        self.addSubview(self.numberLabel)
+        self.addSubview(self.dateLabel)
+        self.addSubview(self.upButton)
+        self.addSubview(self.downButton)
+        self.addSubview(self.confirmButton)
+        
+        self.numberLabel.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+        }
+        
+        self.dateLabel.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalTo(self.upButton.snp.trailing).offset(Metric.basePadding)
+        }
+        
+        self.upButton.snp.makeConstraints {
+            $0.bottom.equalTo(self.numberLabel.snp.top).offset(-Metric.basePadding)
+            $0.centerX.equalToSuperview()
+        }
+        
+        self.downButton.snp.makeConstraints {
+            $0.top.equalTo(self.numberLabel.snp.bottom).offset(Metric.basePadding)
+            $0.centerX.equalToSuperview()
+        }
+        
+        self.confirmButton.snp.makeConstraints {
+            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(Metric.basePadding)
+            $0.leading.trailing.equalToSuperview().inset(Metric.basePadding)
+            $0.height.equalTo(Metric.confirmButtonHeight)
         }
     }
 }
