@@ -13,6 +13,7 @@
 		1C06FB032BF3D7A1004F35BB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB022BF3D7A1004F35BB /* CategoryViewController.swift */; };
 		1C06FB052BF3DAB6004F35BB /* PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB042BF3DAB6004F35BB /* PeriodView.swift */; };
 		1C06FB072BFB3C4B004F35BB /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */; };
+		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1CB068F72BED3D220086B88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB068F62BED3D220086B88F /* AppDelegate.swift */; };
 		1CB068F92BED3D220086B88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB068F82BED3D220086B88F /* SceneDelegate.swift */; };
 		1CB068FB2BED3D220086B88F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB068FA2BED3D220086B88F /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		1C06FB022BF3D7A1004F35BB /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		1C06FB042BF3DAB6004F35BB /* PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodView.swift; sourceTree = "<group>"; };
 		1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
+		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1CB068F32BED3D220086B88F /* LivingFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivingFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB068F62BED3D220086B88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CB068F82BED3D220086B88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		1C991EC82BFCD5D100A4FB4F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		1CB068EA2BED3D220086B88F = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 			children = (
 				1CB0690B2BED45420086B88F /* Presentation */,
 				1CB069212BF254A30086B88F /* DesignSystem */,
+				1C991EC82BFCD5D100A4FB4F /* Utils */,
 				1CB068F62BED3D220086B88F /* AppDelegate.swift */,
 				1CB068F82BED3D220086B88F /* SceneDelegate.swift */,
 				1CB068FA2BED3D220086B88F /* ViewController.swift */,
@@ -279,6 +290,7 @@
 				1C06FAFB2BF3D50A004F35BB /* CategoryCollectionViewCell.swift in Sources */,
 				1CB069292BF25A000086B88F /* Typography.swift in Sources */,
 				1CB0692B2BF26F560086B88F /* IconImages.swift in Sources */,
+				1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */,
 				1CB069332BF27DA80086B88F /* CategoryView.swift in Sources */,
 				1CB068F92BED3D220086B88F /* SceneDelegate.swift in Sources */,
 			);
