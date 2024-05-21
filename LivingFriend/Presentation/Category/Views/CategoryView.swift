@@ -9,6 +9,10 @@ import UIKit
 
 final class CategoryView: UIView {
     
+    // MARK: - Properties
+    
+    var didTapColletionViewAction: (() -> Void)?
+    
     // MARK: - Metric
     
     private enum Metric {
@@ -87,6 +91,13 @@ extension CategoryView: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.bind(image: image, title: title)
         }
         return cell
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        self.didTapColletionViewAction?()
     }
 }
 
