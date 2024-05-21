@@ -73,3 +73,22 @@ final class CategoryViewController: UIViewController {
         self.dismiss(animated: true)
     }
 }
+
+// MARK: - UIViewControllerTransitioningDelegate
+
+extension CategoryViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(
+        forPresented presented: UIViewController,
+        presenting: UIViewController,
+        source: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
+        return PresentTransition()
+    }
+    
+    func animationController(
+        forDismissed dismissed: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
+        return DismissTransition()
+    }
+}
