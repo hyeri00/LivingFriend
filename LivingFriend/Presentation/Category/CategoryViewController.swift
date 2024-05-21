@@ -37,7 +37,17 @@ final class CategoryViewController: UIViewController {
     
     private func configure() {
         
+        self.addConfigure()
         self.setNavigationBar()
+    }
+    
+    private func addConfigure() {
+        self.categoryView.didTapColletionViewAction = { [weak self] in
+            let categoryViewController = UINavigationController(rootViewController: PeriodViewController())
+            categoryViewController.modalPresentationStyle = .overFullScreen
+            categoryViewController.transitioningDelegate = self
+            self?.present(categoryViewController, animated: true)
+        }
     }
     
     private func setNavigationBar() {
