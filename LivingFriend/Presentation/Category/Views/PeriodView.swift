@@ -86,7 +86,21 @@ final class PeriodView: UIView {
     private func configure() {
         self.backgroundColor = .white
         
+        self.addConfigure()
         self.makeConstraints()
+    }
+    
+    private func addConfigure() {
+        self.upButton.addAction(UIAction(handler: { [weak self] _ in
+            if let self = self,
+               self.number >= 200 {
+                return
+            }
+            
+            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                self?.number += 1
+            }, completion: nil)
+        }), for: .touchUpInside)
     }
     
     private func makeConstraints() {
