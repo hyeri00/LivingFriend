@@ -61,6 +61,61 @@ final class PeriodView: UIView {
         return button
     }()
     
+    private let minus20Button: UIButton = {
+        let button = UIButton()
+        button.setTitle("-20", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = Font.Typography.bold10
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .black
+        button.clipsToBounds = true
+        return button
+    }()
+    
+    private let minus10Button: UIButton = {
+        let button = UIButton()
+        button.setTitle("-10", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = Font.Typography.bold10
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .black
+        button.clipsToBounds = true
+        return button
+    }()
+    
+    private let plus10Button: UIButton = {
+        let button = UIButton()
+        button.setTitle("+10", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = Font.Typography.bold10
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .black
+        button.clipsToBounds = true
+        return button
+    }()
+    
+    private let plus20Button: UIButton = {
+        let button = UIButton()
+        button.setTitle("+20", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = Font.Typography.bold10
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .black
+        button.clipsToBounds = true
+        return button
+    }()
+    
+    private lazy var buttonStackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [minus20Button,
+                                                  minus10Button,
+                                                  plus10Button,
+                                                  plus20Button])
+        view.axis = .horizontal
+        view.spacing = 10
+        view.distribution = .fillEqually
+        return view
+    }()
+    
     // MARK: - Counter Logic
     
     private var number = 30 {
