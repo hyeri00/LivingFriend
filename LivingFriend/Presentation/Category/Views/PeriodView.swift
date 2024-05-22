@@ -14,6 +14,8 @@ final class PeriodView: UIView {
     private enum Metric {
         static let basePadding: CGFloat = 30
         static let confirmButtonHeight: CGFloat = 48
+        static let stackViewTopSpacing: CGFloat = 30
+        static let stackViewLeadingSpacing: CGFloat = 40
     }
     
     // MARK: - UI
@@ -173,6 +175,7 @@ final class PeriodView: UIView {
         self.addSubview(self.upButton)
         self.addSubview(self.downButton)
         self.addSubview(self.confirmButton)
+        self.addSubview(self.buttonStackView)
         
         self.numberLabel.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
@@ -197,6 +200,12 @@ final class PeriodView: UIView {
             $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(Metric.basePadding)
             $0.leading.trailing.equalToSuperview().inset(Metric.basePadding)
             $0.height.equalTo(Metric.confirmButtonHeight)
+        }
+        
+        self.buttonStackView.snp.makeConstraints {
+            $0.top.equalTo(self.downButton.snp.bottom).offset(Metric
+                .stackViewTopSpacing)
+            $0.leading.trailing.equalToSuperview().inset(Metric.stackViewLeadingSpacing)
         }
     }
 }
