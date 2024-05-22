@@ -92,24 +92,22 @@ final class PeriodView: UIView {
     
     private func addConfigure() {
         self.upButton.addAction(UIAction(handler: { [weak self] _ in
-            if let self = self,
-               self.number >= 200 {
-                return
-            }
+            guard let self = self else { return }
             
-            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self?.number += 1
+            if self.number >= 200 { return }
+            
+            UIView.transition(with: self.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                self.number = min(self.number + 1, 200)
             }, completion: nil)
         }), for: .touchUpInside)
         
         self.downButton.addAction(UIAction(handler: { [weak self] _ in
-            if let self = self,
-               self.number <= 1 {
-                return
-            }
+            guard let self = self else { return }
             
-            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self?.number -= 1
+            if self.number <= 1 { return }
+            
+            UIView.transition(with: self.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                self.number = max(self.number - 1, 1)
             }, completion: nil)
         }), for: .touchUpInside)
     }
