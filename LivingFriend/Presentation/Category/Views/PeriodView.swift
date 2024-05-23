@@ -179,6 +179,10 @@ final class PeriodView: UIView {
         self.plus10Button.addAction(UIAction(handler: { [weak self] _ in
             self?.number = min((self?.number ?? 0) + 10, 200)
         }), for: .touchUpInside)
+        
+        self.plus20Button.addAction(UIAction(handler: { [weak self] _ in
+            self?.number = min((self?.number ?? 0) + 20, 200)
+        }), for: .touchUpInside)
     }
     
     private func makeConstraints() {
