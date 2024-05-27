@@ -16,6 +16,9 @@ final class ManageView: UIView {
         view.rowHeight = 52
         view.backgroundColor = .white
         view.separatorStyle = .none
+        
+        view.register(ManageTableViewCell.self,
+                      forCellReuseIdentifier: "ManageTableViewCell")
         return view
     }()
 }
