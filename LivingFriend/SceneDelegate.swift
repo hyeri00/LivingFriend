@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let firstVC = UINavigationController(rootViewController: HomeViewController())
-        let secondVC = UINavigationController(rootViewController: HomeViewController()) // TODO: - 임시로 HomeViewController 설정
+        let secondVC = UINavigationController(rootViewController: ManageViewController())
         
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers([firstVC, secondVC], animated: true)
