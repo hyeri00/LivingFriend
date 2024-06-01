@@ -40,6 +40,16 @@ final class ManageView: UIView {
     
     private func configure() {
         self.backgroundColor = .white
+        
+        self.makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        self.addSubview(self.manageTableView)
+        
+        self.manageTableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
 }
