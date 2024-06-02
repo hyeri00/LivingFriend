@@ -14,7 +14,7 @@ final class ManageTableViewCell: UITableViewCell {
     private enum Metric {
         static let basePadding: CGFloat = 20
     }
-
+    
     // MARK: - UI
     
     private let titleLabel: UILabel = {
@@ -48,6 +48,18 @@ final class ManageTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Bind
+    
+    func bind(
+        title: String,
+        manage: String,
+        date: String
+    ) {
+        self.titleLabel.text = title
+        self.manageLabel.text = manage
+        self.dateLabel.text = date
     }
     
     // MARK: - Configure
