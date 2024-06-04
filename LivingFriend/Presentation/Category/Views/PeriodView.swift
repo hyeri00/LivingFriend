@@ -179,7 +179,9 @@ final class PeriodView: UIView {
         }), for: .touchUpInside)
         
         self.plus10Button.addAction(UIAction(handler: { [weak self] _ in
-            self?.number = min((self?.number ?? 0) + 10, 200)
+            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                self?.number = min((self?.number ?? 0) + 10, 200)
+            }, completion: nil)
         }), for: .touchUpInside)
         
         self.plus20Button.addAction(UIAction(handler: { [weak self] _ in
