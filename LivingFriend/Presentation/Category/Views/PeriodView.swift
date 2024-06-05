@@ -65,7 +65,7 @@ final class PeriodView: UIView {
     
     private let minus20Button: UIButton = {
         let button = UIButton()
-        button.setTitle("-20", for: .normal)
+        button.setTitle(TextManager.period_down20, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = Font.Typography.bold10
         button.layer.cornerRadius = 8
@@ -76,7 +76,7 @@ final class PeriodView: UIView {
     
     private let minus10Button: UIButton = {
         let button = UIButton()
-        button.setTitle("-10", for: .normal)
+        button.setTitle(TextManager.period_down10, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = Font.Typography.bold10
         button.layer.cornerRadius = 8
@@ -87,7 +87,7 @@ final class PeriodView: UIView {
     
     private let plus10Button: UIButton = {
         let button = UIButton()
-        button.setTitle("+10", for: .normal)
+        button.setTitle(TextManager.period_up10, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = Font.Typography.bold10
         button.layer.cornerRadius = 8
@@ -98,7 +98,7 @@ final class PeriodView: UIView {
     
     private let plus20Button: UIButton = {
         let button = UIButton()
-        button.setTitle("+20", for: .normal)
+        button.setTitle(TextManager.period_up20, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = Font.Typography.bold10
         button.layer.cornerRadius = 8
