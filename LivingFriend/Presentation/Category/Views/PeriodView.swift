@@ -148,49 +148,25 @@ final class PeriodView: UIView {
     }
     
     private func addConfigure() {
-        self.upButton.addAction(UIAction(handler: { [weak self] _ in
-            guard let self = self else { return }
-            
-            if self.number >= 200 { return }
-            
-            UIView.transition(with: self.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self.number = min(self.number + 1, 200)
-            }, completion: nil)
-        }), for: .touchUpInside)
+        let actions: [(UIButton, Int)] = [
+            (self.upButton, 1),
+            (self.downButton, -1),
+            (self.minus20Button, -20),
+            (self.minus10Button, -10),
+            (self.plus10Button, 10),
+            (self.plus20Button, 20)
+        ]
         
-        self.downButton.addAction(UIAction(handler: { [weak self] _ in
-            guard let self = self else { return }
-            
-            if self.number <= 1 { return }
-            
-            UIView.transition(with: self.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self.number = max(self.number - 1, 1)
-            }, completion: nil)
-        }), for: .touchUpInside)
-        
-        self.minus20Button.addAction(UIAction(handler: { [weak self] _ in
-            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self?.number = max((self?.number ?? 0) - 20, 1)
-            }, completion: nil)
-        }), for: .touchUpInside)
-        
-        self.minus10Button.addAction(UIAction(handler: { [weak self] _ in
-            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self?.number = max((self?.number ?? 0) - 10, 1)
-            }, completion: nil)
-        }), for: .touchUpInside)
-        
-        self.plus10Button.addAction(UIAction(handler: { [weak self] _ in
-            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self?.number = min((self?.number ?? 0) + 10, 200)
-            }, completion: nil)
-        }), for: .touchUpInside)
-        
-        self.plus20Button.addAction(UIAction(handler: { [weak self] _ in
-            UIView.transition(with: self!.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                self?.number = min((self?.number ?? 0) + 20, 200)
-            }, completion: nil)
-        }), for: .touchUpInside)
+        for (button, adjustment) in actions {
+            button.addAction(UIAction(handler: { [weak self] _ in
+                guard let self = self else { return }
+                
+                UIView.transition(with: self.numberLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                    let newValue = (self.number) + adjustment
+                    self.number = min(max(newValue, 1), 200)
+                }, completion: nil)
+            }), for: .touchUpInside)
+        }
     }
     
     private func makeConstraints() {
