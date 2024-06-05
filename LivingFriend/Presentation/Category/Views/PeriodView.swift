@@ -52,17 +52,6 @@ final class PeriodView: UIView {
         return button
     }()
     
-    private let confirmButton: UIButton = {
-        let button = UIButton()
-        button.setTitle(TextManager.period_confirmText, for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = Font.Typography.air14
-        button.layer.cornerRadius = 12
-        button.backgroundColor = .black
-        button.clipsToBounds = true
-        return button
-    }()
-    
     private let minus20Button: UIButton = {
         let button = UIButton()
         button.setTitle(TextManager.period_down20, for: .normal)
@@ -116,6 +105,17 @@ final class PeriodView: UIView {
         view.spacing = 10
         view.distribution = .fillEqually
         return view
+    }()
+    
+    private let confirmButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(TextManager.period_confirmText, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = Font.Typography.air14
+        button.layer.cornerRadius = 12
+        button.backgroundColor = .black
+        button.clipsToBounds = true
+        return button
     }()
     
     // MARK: - Counter Logic
@@ -174,8 +174,8 @@ final class PeriodView: UIView {
         self.addSubview(self.dateLabel)
         self.addSubview(self.upButton)
         self.addSubview(self.downButton)
-        self.addSubview(self.confirmButton)
         self.addSubview(self.buttonStackView)
+        self.addSubview(self.confirmButton)
         
         self.numberLabel.snp.makeConstraints {
             $0.centerX.centerY.equalToSuperview()
@@ -196,16 +196,16 @@ final class PeriodView: UIView {
             $0.centerX.equalToSuperview()
         }
         
-        self.confirmButton.snp.makeConstraints {
-            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(Metric.basePadding)
-            $0.leading.trailing.equalToSuperview().inset(Metric.basePadding)
-            $0.height.equalTo(Metric.confirmButtonHeight)
-        }
-        
         self.buttonStackView.snp.makeConstraints {
             $0.top.equalTo(self.downButton.snp.bottom).offset(Metric
                 .stackViewTopSpacing)
             $0.leading.trailing.equalToSuperview().inset(Metric.stackViewLeadingSpacing)
+        }
+        
+        self.confirmButton.snp.makeConstraints {
+            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom).inset(Metric.basePadding)
+            $0.leading.trailing.equalToSuperview().inset(Metric.basePadding)
+            $0.height.equalTo(Metric.confirmButtonHeight)
         }
     }
 }
