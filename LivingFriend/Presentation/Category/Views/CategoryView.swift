@@ -35,6 +35,17 @@ final class CategoryView: UIView {
         return view
     }()
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if let layout = self.listCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            let totalWidth = self.listCollectionView.bounds.width
+            let availableWidth = totalWidth - layout.sectionInset.left - layout.sectionInset.right - (layout.minimumInteritemSpacing * 2)
+            let itemWidth = availableWidth / 3
+            layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        }
+    }
+    
     // MARK: - Initialize
     
     override init(frame: CGRect) {
@@ -110,6 +121,8 @@ extension CategoryView: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: 120, height: 120)
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        let itemWidth = (collectionView.bounds.width - layout.sectionInset.left - layout.sectionInset.right - layout.minimumInteritemSpacing * 2) / 3
+        return CGSize(width: itemWidth, height: itemWidth)
     }
 }
