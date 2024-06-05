@@ -54,7 +54,7 @@ final class PeriodView: UIView {
     
     private let confirmButton: UIButton = {
         let button = UIButton()
-        button.setTitle("설정 완료", for: .normal)
+        button.setTitle(TextManager.period_confirmText, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = Font.Typography.air14
         button.layer.cornerRadius = 12

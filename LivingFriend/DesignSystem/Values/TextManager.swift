@@ -23,4 +23,5 @@ struct TextManager {
     static let period_date = "일"
     static let period_up = "+"
     static let period_down = "-"
+    static let period_confirmText = "설정 완료"
 }
