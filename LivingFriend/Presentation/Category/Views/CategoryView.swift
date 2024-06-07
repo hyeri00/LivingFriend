@@ -109,6 +109,11 @@ extension CategoryView: UICollectionViewDelegate, UICollectionViewDataSource {
         didSelectItemAt indexPath: IndexPath
     ) {
         self.didTapColletionViewAction?()
+        
+        let selectedItem = CategoryData.shared.categoryData[indexPath.row]
+        switch selectedItem {
+        case .item(_, _, let title):
+        }
     }
 }
 
