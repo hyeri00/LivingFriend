@@ -131,3 +131,10 @@ extension CategoryView: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemWidth, height: itemWidth)
     }
 }
+
+extension CategoryView: PeriodViewDelegate {
+    
+    func didSelectCategory(title: String) {
+        
+    }
+}
