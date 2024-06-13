@@ -19,6 +19,8 @@
 		1C991ED52C0896BE00A4FB4F /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED42C0896BE00A4FB4F /* ManageViewController.swift */; };
 		1CA89ABD2C14A54800B8E80A /* PeriodViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89ABC2C14A54800B8E80A /* PeriodViewDelegate.swift */; };
 		1CA89AC02C1899E100B8E80A /* CoreDataStack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89ABE2C1899E100B8E80A /* CoreDataStack.xcdatamodeld */; };
+		1CA89AC32C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89AC12C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift */; };
+		1CA89AC42C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89AC22C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift */; };
 		1CB068F72BED3D220086B88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB068F62BED3D220086B88F /* AppDelegate.swift */; };
 		1CB068F92BED3D220086B88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB068F82BED3D220086B88F /* SceneDelegate.swift */; };
 		1CB068FB2BED3D220086B88F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB068FA2BED3D220086B88F /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		1C991ED42C0896BE00A4FB4F /* ManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
 		1CA89ABC2C14A54800B8E80A /* PeriodViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewDelegate.swift; sourceTree = "<group>"; };
 		1CA89ABF2C1899E100B8E80A /* CoreDataStack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStack.xcdatamodel; sourceTree = "<group>"; };
+		1CA89AC12C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyManageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1CA89AC22C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyManageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1CB068F32BED3D220086B88F /* LivingFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivingFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB068F62BED3D220086B88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CB068F82BED3D220086B88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +86,6 @@
 			children = (
 				1C06FAFE2BF3D604004F35BB /* CategoryData.swift */,
 				1CA89ABC2C14A54800B8E80A /* PeriodViewDelegate.swift */,
-				1CA89ABE2C1899E100B8E80A /* CoreDataStack.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -121,6 +124,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1CA89AC52C1978F200B8E80A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1CA89ABE2C1899E100B8E80A /* CoreDataStack.xcdatamodeld */,
+				1CA89AC12C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift */,
+				1CA89AC22C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		1CB068EA2BED3D220086B88F = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 		1CB068F52BED3D220086B88F /* LivingFriend */ = {
 			isa = PBXGroup;
 			children = (
+				1CA89AC52C1978F200B8E80A /* Data */,
 				1CB0690B2BED45420086B88F /* Presentation */,
 				1CB069212BF254A30086B88F /* DesignSystem */,
 				1C991EC82BFCD5D100A4FB4F /* Utils */,
@@ -322,6 +336,8 @@
 				1CA89ABD2C14A54800B8E80A /* PeriodViewDelegate.swift in Sources */,
 				1CA89AC02C1899E100B8E80A /* CoreDataStack.xcdatamodeld in Sources */,
 				1CB069202BF2528F0086B88F /* HomeViewController.swift in Sources */,
+				1CA89AC32C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift in Sources */,
+				1CA89AC42C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift in Sources */,
 				1C06FB012BF3D643004F35BB /* TextManager.swift in Sources */,
 				1C06FAFF2BF3D604004F35BB /* CategoryData.swift in Sources */,
 				1C991ED52C0896BE00A4FB4F /* ManageViewController.swift in Sources */,
@@ -591,8 +607,7 @@
 				1CA89ABF2C1899E100B8E80A /* CoreDataStack.xcdatamodel */,
 			);
 			currentVersion = 1CA89ABF2C1899E100B8E80A /* CoreDataStack.xcdatamodel */;
-			name = CoreDataStack.xcdatamodeld;
-			path = /Users/hyeri/Downloads/LivingFriend/LivingFriend/Presentation/Category/Data/CoreDataStack.xcdatamodeld;
+			path = CoreDataStack.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
