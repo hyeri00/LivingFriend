@@ -17,7 +17,6 @@
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
 		1C991ED52C0896BE00A4FB4F /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED42C0896BE00A4FB4F /* ManageViewController.swift */; };
-		1CA89ABD2C14A54800B8E80A /* PeriodViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89ABC2C14A54800B8E80A /* PeriodViewDelegate.swift */; };
 		1CA89AC02C1899E100B8E80A /* CoreDataStack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89ABE2C1899E100B8E80A /* CoreDataStack.xcdatamodeld */; };
 		1CA89AC32C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89AC12C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift */; };
 		1CA89AC42C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA89AC22C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift */; };
@@ -50,7 +49,6 @@
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
 		1C991ED42C0896BE00A4FB4F /* ManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
-		1CA89ABC2C14A54800B8E80A /* PeriodViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewDelegate.swift; sourceTree = "<group>"; };
 		1CA89ABF2C1899E100B8E80A /* CoreDataStack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStack.xcdatamodel; sourceTree = "<group>"; };
 		1CA89AC12C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyManageEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1CA89AC22C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyManageEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				1C06FAFE2BF3D604004F35BB /* CategoryData.swift */,
-				1CA89ABC2C14A54800B8E80A /* PeriodViewDelegate.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -347,7 +344,6 @@
 			files = (
 				1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */,
 				1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */,
-				1CA89ABD2C14A54800B8E80A /* PeriodViewDelegate.swift in Sources */,
 				1CA89AC02C1899E100B8E80A /* CoreDataStack.xcdatamodeld in Sources */,
 				1CB069202BF2528F0086B88F /* HomeViewController.swift in Sources */,
 				1CA89AC32C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift in Sources */,
