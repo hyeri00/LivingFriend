@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 final class PeriodView: UIView {
+    
+    // MARK: - Properties
+    
+    var container: NSPersistentContainer!
     
     // MARK: - Metric
     
@@ -167,6 +172,43 @@ final class PeriodView: UIView {
                 }, completion: nil)
             }), for: .touchUpInside)
         }
+        
+        self.confirmButton.addAction(UIAction(handler: { [weak self] _ in
+            guard let title = SharedData.shared.selectedTitle else {
+                print("SharedData's selectedTitle is nil")
+                return
+            }
+            
+            let periodText = "\(self?.number ?? -2)"
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateText = dateFormatter.string(from: Date())
+            
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                print("Failed to get AppDelegate")
+                return
+            }
+            
+            let context = appDelegate.persistentContainer.viewContext
+            guard let entity = NSEntityDescription.entity(forEntityName: "MyManageEntity", in: context) else {
+                print("Failed to get entity description for MyManageEntity")
+                return
+            }
+            
+            let object = NSManagedObject(entity: entity, insertInto: context)
+            
+            object.setValue(title, forKey: "categoryTitle")
+            object.setValue(dateText, forKey: "dateText")
+            object.setValue(periodText, forKey: "periodText")
+            
+            do {
+                try context.save()
+                print("Saved to Core Data with title: \(title), dateText: \(dateText), periodText: \(periodText)")
+            } catch {
+                print("Failed saving to Core Data: \(error)")
+            }
+        }), for: .touchUpInside)
+
     }
     
     private func makeConstraints() {
