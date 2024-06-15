@@ -112,6 +112,7 @@ extension CategoryView: UICollectionViewDelegate, UICollectionViewDataSource {
         let selectedItem = CategoryData.shared.categoryData[indexPath.row]
         switch selectedItem {
         case .item(_, _, let title):
+            SharedData.shared.selectedTitle = title
         }
     }
 }
