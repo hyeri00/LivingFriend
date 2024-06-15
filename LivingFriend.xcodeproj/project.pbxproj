@@ -35,6 +35,7 @@
 		1CB069292BF25A000086B88F /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB069282BF25A000086B88F /* Typography.swift */; };
 		1CB0692B2BF26F560086B88F /* IconImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0692A2BF26F560086B88F /* IconImages.swift */; };
 		1CB069332BF27DA80086B88F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB069322BF27DA80086B88F /* CategoryView.swift */; };
+		1CDC10522C1D714300CD12B3 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC10512C1D714300CD12B3 /* SharedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		1CB069282BF25A000086B88F /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		1CB0692A2BF26F560086B88F /* IconImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImages.swift; sourceTree = "<group>"; };
 		1CB069322BF27DA80086B88F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		1CDC10512C1D714300CD12B3 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				1CA89ABE2C1899E100B8E80A /* CoreDataStack.xcdatamodeld */,
 				1CA89AC12C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift */,
 				1CA89AC22C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift */,
+				1CDC10512C1D714300CD12B3 /* SharedData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				1CB068F72BED3D220086B88F /* AppDelegate.swift in Sources */,
 				1C06FAFB2BF3D50A004F35BB /* CategoryCollectionViewCell.swift in Sources */,
 				1CB069292BF25A000086B88F /* Typography.swift in Sources */,
+				1CDC10522C1D714300CD12B3 /* SharedData.swift in Sources */,
 				1CB0692B2BF26F560086B88F /* IconImages.swift in Sources */,
 				1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */,
 				1CB069332BF27DA80086B88F /* CategoryView.swift in Sources */,
