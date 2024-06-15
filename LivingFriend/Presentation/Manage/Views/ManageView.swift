@@ -54,6 +54,8 @@ final class ManageView: UIView {
     
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
 extension ManageView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(
