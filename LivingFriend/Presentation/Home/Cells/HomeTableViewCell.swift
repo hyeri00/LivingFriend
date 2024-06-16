@@ -75,7 +75,7 @@ final class HomeTableViewCell: UITableViewCell {
     
     private func configure() {
         self.backgroundColor = .white
-        self.selectionStyle = .blue
+        self.selectionStyle = .none
         
         self.makeConstraints()
     }
