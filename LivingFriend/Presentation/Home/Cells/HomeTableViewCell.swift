@@ -9,6 +9,10 @@ import UIKit
 
 final class HomeTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
+    
+    var deleteAction: (() -> Void)?
+    
     // MARK: - Metric
     
     private enum Metric {
@@ -79,7 +83,14 @@ final class HomeTableViewCell: UITableViewCell {
         self.backgroundColor = .white
         self.selectionStyle = .none
         
+        self.addConfigure()
         self.makeConstraints()
+    }
+    
+    private func addConfigure() {
+        self.deleteButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.deleteAction?()
+        }), for: .touchUpInside)
     }
     
     private func makeConstraints() {
