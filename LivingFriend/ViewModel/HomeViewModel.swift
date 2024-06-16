@@ -12,6 +12,7 @@ import CoreData
 class HomeViewModel {
     
     var fetchedObjects: [MyManageEntity] = []
+    var filteredObjects: [MyManageEntity] = []
     
     private var managedObjectContext: NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -23,6 +24,18 @@ class HomeViewModel {
         
         do {
             fetchedObjects = try managedObjectContext.fetch(fetchRequest)
+            completion()
+        } catch {
+            print("Failed to fetch objects: \(error)")
+        }
+    }
+    
+    func getFilteredObject(for date: String, completion: @escaping () -> Void) {
+        let fetchRequest: NSFetchRequest<MyManageEntity> = MyManageEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "dateText == %@", date)
+        
+        do {
+            filteredObjects = try managedObjectContext.fetch(fetchRequest)
             completion()
         } catch {
             print("Failed to fetch objects: \(error)")

@@ -180,7 +180,5 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
                 self?.listTableView.deleteRows(at: [indexPath], with: .automatic)
             }
         }
-        
-        return cell
     }
 }
