@@ -18,6 +18,7 @@ enum IconImages {
     
     case back
     case x
+    case delete
     
     case appliance
     case basin
@@ -41,6 +42,8 @@ enum IconImages {
             return UIImage(named: "icon_back")
         case .x:
             return UIImage(named: "icon_x")
+        case .delete:
+            return UIImage(named: "icon_delete")
             
         case .appliance:
             return UIImage(named: "icon_appliance")
