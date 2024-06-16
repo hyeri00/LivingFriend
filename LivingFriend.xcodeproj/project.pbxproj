@@ -36,6 +36,7 @@
 		1CB069332BF27DA80086B88F /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB069322BF27DA80086B88F /* CategoryView.swift */; };
 		1CC7161E2C1D74F600E8F55A /* PeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC7161D2C1D74F600E8F55A /* PeriodViewModel.swift */; };
 		1CC716212C1D7B8500E8F55A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC716202C1D7B8500E8F55A /* HomeTableViewCell.swift */; };
+		1CC716232C1F354E00E8F55A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC716222C1F354E00E8F55A /* HomeViewModel.swift */; };
 		1CDC10522C1D714300CD12B3 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDC10512C1D714300CD12B3 /* SharedData.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		1CB069322BF27DA80086B88F /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		1CC7161D2C1D74F600E8F55A /* PeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewModel.swift; sourceTree = "<group>"; };
 		1CC716202C1D7B8500E8F55A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		1CC716222C1F354E00E8F55A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1CDC10512C1D714300CD12B3 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				1CC7161D2C1D74F600E8F55A /* PeriodViewModel.swift */,
+				1CC716222C1F354E00E8F55A /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */,
 				1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */,
 				1CA89AC02C1899E100B8E80A /* CoreDataStack.xcdatamodeld in Sources */,
+				1CC716232C1F354E00E8F55A /* HomeViewModel.swift in Sources */,
 				1CB069202BF2528F0086B88F /* HomeViewController.swift in Sources */,
 				1CA89AC32C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift in Sources */,
 				1CA89AC42C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift in Sources */,
