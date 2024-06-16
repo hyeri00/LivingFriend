@@ -14,7 +14,7 @@ final class HomeView: UIView {
     // MARK: - Properties
     
     var didTapPlusButtonAction: (() -> Void)?
-
+    
     // MARK: - Metric
     
     private enum Metric {
@@ -60,6 +60,19 @@ final class HomeView: UIView {
         button.setImage(IconImages.search.image, for: .normal)
         button.isHidden = true // TODO: - 기능 미구현
         return button
+    }()
+    
+    private lazy var listTableView: UITableView = {
+        let view = UITableView()
+        view.rowHeight = 60
+        view.backgroundColor = .white
+        view.separatorStyle = .none
+        
+        view.delegate = self
+        view.dataSource = self
+        view.register(HomeTableViewCell.self,
+                      forCellReuseIdentifier: "HomeTableViewCell")
+        return view
     }()
     
     private let plusButton: UIButton = {
