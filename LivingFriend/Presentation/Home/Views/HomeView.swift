@@ -55,6 +55,7 @@ final class HomeView: UIView {
         calendar.appearance.selectionColor = .lightGray
         calendar.appearance.todayColor = .darkGray
         
+        calendar.delegate = self
         return calendar
     }()
     
@@ -155,29 +156,45 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return self.viewModel.fetchedObjects.count
+        return self.viewModel.filteredObjects.count
     }
     
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell",
-                                                 for: indexPath) as! HomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
         
-        let object = self.viewModel.getObject(at: indexPath)
+        if indexPath.row < viewModel.filteredObjects.count {
+            let object = viewModel.filteredObjects[indexPath.row]
+            let period = object.periodText ?? ""
+            let date = object.dateText ?? ""
+            let deadLineDate = self.viewModel.calculateDate(from: date, withPeriod: period)
+            cell.bind(title: object.categoryTitle ?? "", period: object.periodText ?? "", date: deadLineDate)
+            
+            cell.deleteAction = { [weak self] in
+                self?.viewModel.deleteObject(at: indexPath) {
+                    self?.listTableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            }
+        } else {
+            print("Index out of range for indexPath: \(indexPath)")
+        }
         
-        let title = object.categoryTitle ?? ""
-        let period = object.periodText ?? ""
-        let date = object.dateText ?? ""
+        return cell
+    }
+}
+
+extension HomeView: FSCalendarDelegate {
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let selectedDate = dateFormatter.string(from: date)
         
-        let deadLineDate = self.viewModel.calculateDate(from: date, withPeriod: period)
-        
-        cell.bind(title: title, period: period, date: deadLineDate)
-        
-        cell.deleteAction = { [weak self] in
-            self?.viewModel.deleteObject(at: indexPath) {
-                self?.listTableView.deleteRows(at: [indexPath], with: .automatic)
+        self.viewModel.getFilteredObject(for: selectedDate) {
+            DispatchQueue.main.async {
+                self.listTableView.reloadData()
             }
         }
     }
