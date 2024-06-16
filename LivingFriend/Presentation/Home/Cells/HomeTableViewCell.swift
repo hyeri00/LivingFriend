@@ -41,6 +41,12 @@ final class HomeTableViewCell: UITableViewCell {
         return label
     }()
     
+    private let deleteButton: UIButton = {
+        let button = UIButton()
+        button.setImage(IconImages.delete.image, for: .normal)
+        return button
+    }()
+    
     // MARK: - Initialize
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
