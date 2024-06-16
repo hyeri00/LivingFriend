@@ -29,6 +29,19 @@ class HomeViewModel {
         }
     }
     
+    func deleteObject(at indexPath: IndexPath, completion: @escaping () -> Void) {
+        let objectToDelete = fetchedObjects[indexPath.row]
+        managedObjectContext.delete(objectToDelete)
+        
+        do {
+            try managedObjectContext.save()
+            fetchedObjects.remove(at: indexPath.row)
+            completion()
+        } catch {
+            print("Failed to delete object: \(error)")
+        }
+    }
+    
     func getObject(at indexPath: IndexPath) -> MyManageEntity {
         return fetchedObjects[indexPath.row]
     }
