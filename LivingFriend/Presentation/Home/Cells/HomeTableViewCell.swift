@@ -53,6 +53,18 @@ final class HomeTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Bind
+    
+    func bind(
+        title: String,
+        period: String,
+        date: String
+    ) {
+        self.titleLabel.text = title
+        self.periodLabel.text = period
+        self.dateLabel.text = date
+    }
+    
     // MARK: - Configure
     
     private func configure() {
