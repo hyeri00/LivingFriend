@@ -13,6 +13,8 @@ final class HomeView: UIView {
     
     // MARK: - Properties
     
+    private let viewModel = HomeViewModel()
+    
     var didTapPlusButtonAction: (() -> Void)?
     
     // MARK: - Metric
@@ -99,6 +101,10 @@ final class HomeView: UIView {
     private func configure() {
         self.backgroundColor = .white
         
+        self.viewModel.fetchObjects { [weak self] in
+            self?.listTableView.reloadData()
+        }
+        
         self.addConfigure()
         self.makeConstraints()
     }
@@ -149,15 +155,25 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 1
+        return self.viewModel.fetchedObjects.count
     }
     
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell",
                                                  for: indexPath) as! HomeTableViewCell
+        
+        let object = self.viewModel.getObject(at: indexPath)
+        
+        let title = object.categoryTitle ?? ""
+        let period = object.periodText ?? ""
+        let date = object.dateText ?? ""
+        
+        let deadLineDate = self.viewModel.calculateDate(from: date, withPeriod: period)
+        
+        cell.bind(title: title, period: period, date: deadLineDate)
         
         return cell
     }
