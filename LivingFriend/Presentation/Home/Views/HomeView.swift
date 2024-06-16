@@ -25,6 +25,7 @@ final class HomeView: UIView {
         static let plusButtonBottomMargin: CGFloat = 50
         static let plusButtonTrailingMargin: CGFloat = 20
         static let plusButtonSize: CGFloat = 48
+        static let tableViewTopSpacing: CGFloat = 10
     }
     
     // MARK: - UI
@@ -111,6 +112,7 @@ final class HomeView: UIView {
     private func makeConstraints() {
         self.addSubview(self.calendar)
         self.calendar.addSubview(self.searchButton)
+        self.addSubview(self.listTableView)
         self.addSubview(self.plusButton)
         
         self.calendar.snp.makeConstraints {
@@ -123,6 +125,12 @@ final class HomeView: UIView {
             $0.top.equalToSuperview().inset(Metric.searchButtonTopMargin)
             $0.trailing.equalToSuperview().inset(Metric.searchButtonTrailingMargin)
             $0.width.height.equalTo(Metric.searchButtonSize)
+        }
+        
+        self.listTableView.snp.makeConstraints {
+            $0.top.equalTo(self.calendar.snp.bottom).offset(Metric.tableViewTopSpacing)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
         }
         
         self.plusButton.snp.makeConstraints {
