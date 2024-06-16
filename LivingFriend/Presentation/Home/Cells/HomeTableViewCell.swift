@@ -16,6 +16,8 @@ final class HomeTableViewCell: UITableViewCell {
         static let leadingMargin: CGFloat = 24
         static let periodTopSpacing: CGFloat = 10
         static let periodBottomMargin: CGFloat = 5
+        static let deleteButtonTrailingMargin: CGFloat = 20
+        static let deleteButtonSize: CGFloat = 15
     }
     
     // MARK: - UI
@@ -84,6 +86,7 @@ final class HomeTableViewCell: UITableViewCell {
         self.addSubview(self.titleLabel)
         self.addSubview(self.periodLabel)
         self.addSubview(self.dateLabel)
+        self.contentView.addSubview(self.deleteButton)
         
         self.titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(Metric.titleTopMargin)
@@ -100,6 +103,12 @@ final class HomeTableViewCell: UITableViewCell {
             $0.top.equalTo(self.periodLabel.snp.top)
             $0.leading.equalTo(self.periodLabel.snp.trailing).offset(Metric.leadingMargin)
             $0.bottom.equalTo(self.periodLabel.snp.bottom)
+        }
+        
+        self.deleteButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().offset(-Metric.deleteButtonTrailingMargin)
+            $0.centerY.equalToSuperview()
+            $0.width.height.equalTo(Metric.deleteButtonSize)
         }
     }
 }
