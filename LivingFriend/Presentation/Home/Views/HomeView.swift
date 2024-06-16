@@ -170,7 +170,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
             let period = object.periodText ?? ""
             let date = object.dateText ?? ""
             let deadLineDate = self.viewModel.calculateDate(from: date, withPeriod: period)
-            cell.bind(title: object.categoryTitle ?? "", period: object.periodText ?? "", date: deadLineDate)
+            cell.bind(title: object.categoryTitle ?? "", period: object.periodText! + "일", date: deadLineDate)
             
             cell.deleteAction = { [weak self] in
                 self?.viewModel.deleteObject(at: indexPath) {
