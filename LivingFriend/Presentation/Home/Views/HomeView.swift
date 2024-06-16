@@ -175,6 +175,12 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         
         cell.bind(title: title, period: period, date: deadLineDate)
         
+        cell.deleteAction = { [weak self] in
+            self?.viewModel.deleteObject(at: indexPath) {
+                self?.listTableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        }
+        
         return cell
     }
 }
