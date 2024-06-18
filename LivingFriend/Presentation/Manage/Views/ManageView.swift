@@ -9,6 +9,10 @@ import UIKit
 
 final class ManageView: UIView {
     
+    // MARK: - Properties
+    
+    private let viewModel = HomeViewModel()
+    
     // MARK: - UI
     
     private lazy var manageTableView: UITableView = {
