@@ -165,20 +165,27 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
         
-        if indexPath.row < viewModel.filteredObjects.count {
-            let object = viewModel.filteredObjects[indexPath.row]
-            let period = object.periodText ?? ""
-            let date = object.dateText ?? ""
-            let deadLineDate = self.viewModel.calculateDate(from: date, withPeriod: period)
-            cell.bind(title: object.categoryTitle ?? "", period: object.periodText! + "일", date: deadLineDate)
-            
-            cell.deleteAction = { [weak self] in
-                self?.viewModel.deleteObject(at: indexPath) {
+        guard indexPath.row < viewModel.filteredObjects.count else {
+            print("Index out of range for indexPath: \(indexPath)")
+            return UITableViewCell()
+        }
+        
+        let object = viewModel.filteredObjects[indexPath.row]
+        
+        let deadLineDate = self.viewModel.calculateDate(from: object.dateText ?? "", withPeriod: object.periodText ?? "")
+        cell.bind(
+            title: object.categoryTitle ?? "",
+            period: object.periodText! + "일",
+            date: deadLineDate
+        )
+        
+        cell.deleteAction = { [weak self] in
+            self?.viewModel.deleteObject(at: indexPath) {
+                self?.viewModel.filteredObjects.remove(at: indexPath.row)
+                DispatchQueue.main.async {
                     self?.listTableView.deleteRows(at: [indexPath], with: .automatic)
                 }
             }
-        } else {
-            print("Index out of range for indexPath: \(indexPath)")
         }
         
         return cell
