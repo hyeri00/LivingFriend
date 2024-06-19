@@ -192,6 +192,8 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - FSCalendarDelegate
+
 extension HomeView: FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
