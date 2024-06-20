@@ -55,11 +55,9 @@ final class ManageTableViewCell: UITableViewCell {
     
     func bind(
         title: String,
-        manage: String,
         date: String
     ) {
         self.titleLabel.text = title
-        self.manageLabel.text = manage
         self.dateLabel.text = date
     }
     
