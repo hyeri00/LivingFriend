@@ -26,6 +26,7 @@ final class ManageTableViewCell: UITableViewCell {
     
     private let manageLabel: UILabel = {
         let label = UILabel()
+        label.text = TextManager.manage_recently
         label.textColor = .red
         label.font = Font.Typography.air10
         return label
