@@ -28,4 +28,6 @@ struct TextManager {
     static let period_down10 = "-10"
     static let period_up10 = "+10"
     static let period_up20 = "+20"
+    
+    static let manage_recently = "최근 교체일"
 }
