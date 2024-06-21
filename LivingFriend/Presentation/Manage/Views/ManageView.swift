@@ -66,7 +66,7 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 1
+        return self.viewModel.fetchedObjects.count
     }
     
     func tableView(
