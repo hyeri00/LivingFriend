@@ -66,7 +66,9 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return self.viewModel.fetchedObjects.count
+        let count = self.viewModel.fetchedObjects.count
+        print("count: \(count)")
+        return count
     }
     
     func tableView(
@@ -75,6 +77,13 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManageTableViewCell",
                                                  for: indexPath) as! ManageTableViewCell
+        
+        let object = self.viewModel.fetchedObjects[indexPath.row]
+               
+        cell.bind(
+            title: object.categoryTitle ?? "",
+            date: object.dateText ?? ""
+        )
         
         return cell
     }
