@@ -55,7 +55,6 @@ final class ManageView: UIView {
             $0.edges.equalToSuperview()
         }
     }
-    
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
