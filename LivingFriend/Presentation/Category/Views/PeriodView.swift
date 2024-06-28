@@ -14,6 +14,8 @@ final class PeriodView: UIView {
     
     private let viewModel = PeriodViewModel()
     
+    var didConfirmTapAction: (() -> Void)?
+    
     // MARK: - Metric
     
     private enum Metric {
@@ -184,6 +186,7 @@ final class PeriodView: UIView {
             self?.viewModel.saveMyManage(categoryTitle: title, dateText: dateText, periodText: periodText)
             print("save title: \(title), dateText: \(dateText), periodText: \(periodText)")
             
+            self?.didConfirmTapAction?()
         }), for: .touchUpInside)
     }
     
