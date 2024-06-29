@@ -15,7 +15,7 @@ final class ManageView: UIView {
     
     // MARK: - UI
     
-    private lazy var manageTableView: UITableView = {
+    lazy var manageTableView: UITableView = {
         let view = UITableView()
         view.rowHeight = 52
         view.backgroundColor = .white
@@ -44,6 +44,12 @@ final class ManageView: UIView {
     
     private func configure() {
         self.backgroundColor = .white
+        
+        self.viewModel.fetchObjects {
+            DispatchQueue.main.async {
+                self.manageTableView.reloadData()
+            }
+        }
         
         self.makeConstraints()
     }
