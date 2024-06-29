@@ -61,10 +61,6 @@ class HomeViewModel {
         }
     }
     
-    func getObject(at indexPath: IndexPath) -> MyManageEntity {
-        return fetchedObjects[indexPath.row]
-    }
-    
     // MARK: - 날짜 변환
 
     func calculateDate(from dateText: String, withPeriod periodText: String) -> String {
