@@ -13,6 +13,7 @@
 		1C06FB032BF3D7A1004F35BB /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB022BF3D7A1004F35BB /* CategoryViewController.swift */; };
 		1C06FB052BF3DAB6004F35BB /* PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB042BF3DAB6004F35BB /* PeriodView.swift */; };
 		1C06FB072BFB3C4B004F35BB /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */; };
+		1C6ED0492C2FE3B100EBED36 /* NavigationControllerRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */; };
 		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
@@ -47,6 +48,7 @@
 		1C06FB022BF3D7A1004F35BB /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		1C06FB042BF3DAB6004F35BB /* PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodView.swift; sourceTree = "<group>"; };
 		1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
+		1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRecognizer.swift; sourceTree = "<group>"; };
 		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 				1C06FAFE2BF3D604004F35BB /* CategoryData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		1C6ED0472C2FE38B00EBED36 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1C991EC82BFCD5D100A4FB4F /* Utils */ = {
@@ -159,6 +169,7 @@
 		1CB068F52BED3D220086B88F /* LivingFriend */ = {
 			isa = PBXGroup;
 			children = (
+				1C6ED0472C2FE38B00EBED36 /* Extension */,
 				1CC7161C2C1D74DA00E8F55A /* ViewModel */,
 				1CA89AC52C1978F200B8E80A /* Data */,
 				1CB0690B2BED45420086B88F /* Presentation */,
@@ -367,6 +378,7 @@
 				1C06FB012BF3D643004F35BB /* TextManager.swift in Sources */,
 				1C06FAFF2BF3D604004F35BB /* CategoryData.swift in Sources */,
 				1C991ED52C0896BE00A4FB4F /* ManageViewController.swift in Sources */,
+				1C6ED0492C2FE3B100EBED36 /* NavigationControllerRecognizer.swift in Sources */,
 				1CB068FB2BED3D220086B88F /* ViewController.swift in Sources */,
 				1C06FB052BF3DAB6004F35BB /* PeriodView.swift in Sources */,
 				1C06FB072BFB3C4B004F35BB /* PeriodViewController.swift in Sources */,
