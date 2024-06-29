@@ -47,6 +47,7 @@ final class ManageView: UIView {
         
         self.viewModel.fetchObjects {
             DispatchQueue.main.async {
+                self.viewModel.filterMostRecentObjects(self.viewModel.fetchedObjects)
                 self.manageTableView.reloadData()
             }
         }
@@ -71,7 +72,7 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        let count = self.viewModel.fetchedObjects.count
+        let count = self.viewModel.recentObjects.count
         print("count: \(count)")
         return count
     }
@@ -83,7 +84,7 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManageTableViewCell",
                                                  for: indexPath) as! ManageTableViewCell
         
-        let object = self.viewModel.fetchedObjects[indexPath.row]
+        let object = self.viewModel.recentObjects[indexPath.row]
                
         cell.bind(
             title: object.categoryTitle ?? "",
