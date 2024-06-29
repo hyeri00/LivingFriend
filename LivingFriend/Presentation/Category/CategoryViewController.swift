@@ -43,10 +43,8 @@ final class CategoryViewController: UIViewController {
     
     private func addConfigure() {
         self.categoryView.didTapColletionViewAction = { [weak self] in
-            let categoryViewController = UINavigationController(rootViewController: PeriodViewController())
-            categoryViewController.modalPresentationStyle = .overFullScreen
-            categoryViewController.transitioningDelegate = self
-            self?.present(categoryViewController, animated: true)
+            let periodViewController = PeriodViewController()
+            self?.navigationController?.pushViewController(periodViewController, animated: true)
         }
     }
     
@@ -71,24 +69,5 @@ final class CategoryViewController: UIViewController {
     @objc
     private func showPrevious() {
         self.dismiss(animated: true)
-    }
-}
-
-// MARK: - UIViewControllerTransitioningDelegate
-
-extension CategoryViewController: UIViewControllerTransitioningDelegate {
-    
-    func animationController(
-        forPresented presented: UIViewController,
-        presenting: UIViewController,
-        source: UIViewController
-    ) -> UIViewControllerAnimatedTransitioning? {
-        return PresentTransition()
-    }
-    
-    func animationController(
-        forDismissed dismissed: UIViewController
-    ) -> UIViewControllerAnimatedTransitioning? {
-        return DismissTransition()
     }
 }
