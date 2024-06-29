@@ -60,6 +60,6 @@ final class PeriodViewController: UIViewController {
     
     @objc
     private func showPrevious() {
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
