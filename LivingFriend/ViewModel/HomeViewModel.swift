@@ -19,6 +19,8 @@ class HomeViewModel {
         return appDelegate.persistentContainer.viewContext
     }
     
+    // MARK: - 모든 데이터 가져오기
+
     func fetchObjects(completion: @escaping () -> Void) {
         let fetchRequest: NSFetchRequest<MyManageEntity> = MyManageEntity.fetchRequest()
         
@@ -30,6 +32,8 @@ class HomeViewModel {
         }
     }
     
+    // MARK: - 데이터 날짜별로 가져오기
+
     func getFilteredObject(for date: String, completion: @escaping () -> Void) {
         let fetchRequest: NSFetchRequest<MyManageEntity> = MyManageEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "dateText == %@", date)
@@ -42,6 +46,8 @@ class HomeViewModel {
         }
     }
     
+    // MARK: - 데이터 삭제하기
+
     func deleteObject(at indexPath: IndexPath, completion: @escaping () -> Void) {
         let objectToDelete = fetchedObjects[indexPath.row]
         managedObjectContext.delete(objectToDelete)
@@ -59,6 +65,8 @@ class HomeViewModel {
         return fetchedObjects[indexPath.row]
     }
     
+    // MARK: - 날짜 변환
+
     func calculateDate(from dateText: String, withPeriod periodText: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
