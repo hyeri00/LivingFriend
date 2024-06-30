@@ -14,6 +14,7 @@
 		1C06FB052BF3DAB6004F35BB /* PeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB042BF3DAB6004F35BB /* PeriodView.swift */; };
 		1C06FB072BFB3C4B004F35BB /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */; };
 		1C6ED0492C2FE3B100EBED36 /* NavigationControllerRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */; };
+		1C6ED04D2C318FB200EBED36 /* ManageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED04C2C318FB200EBED36 /* ManageDetailTableViewCell.swift */; };
 		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
@@ -49,6 +50,7 @@
 		1C06FB042BF3DAB6004F35BB /* PeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodView.swift; sourceTree = "<group>"; };
 		1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
 		1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRecognizer.swift; sourceTree = "<group>"; };
+		1C6ED04C2C318FB200EBED36 /* ManageDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDetailTableViewCell.swift; sourceTree = "<group>"; };
 		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */,
+				1C6ED04C2C318FB200EBED36 /* ManageDetailTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				1CB069102BED48170086B88F /* HomeView.swift in Sources */,
 				1CC7161E2C1D74F600E8F55A /* PeriodViewModel.swift in Sources */,
 				1CB068F72BED3D220086B88F /* AppDelegate.swift in Sources */,
+				1C6ED04D2C318FB200EBED36 /* ManageDetailTableViewCell.swift in Sources */,
 				1C06FAFB2BF3D50A004F35BB /* CategoryCollectionViewCell.swift in Sources */,
 				1CB069292BF25A000086B88F /* Typography.swift in Sources */,
 				1CDC10522C1D714300CD12B3 /* SharedData.swift in Sources */,
