@@ -31,3 +31,24 @@ final class ManageDetailView: UIView {
         return view
     }()
 }
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension ManageDetailView: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        return 1
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ManageDetailTableViewCell",
+                                                 for: indexPath) as! ManageDetailTableViewCell
+        return cell
+    }
+}
