@@ -15,6 +15,7 @@
 		1C06FB072BFB3C4B004F35BB /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */; };
 		1C6ED0492C2FE3B100EBED36 /* NavigationControllerRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */; };
 		1C6ED04D2C318FB200EBED36 /* ManageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED04C2C318FB200EBED36 /* ManageDetailTableViewCell.swift */; };
+		1C6ED04F2C31916D00EBED36 /* ManageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED04E2C31916D00EBED36 /* ManageDetailView.swift */; };
 		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
@@ -51,6 +52,7 @@
 		1C06FB062BFB3C4B004F35BB /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
 		1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRecognizer.swift; sourceTree = "<group>"; };
 		1C6ED04C2C318FB200EBED36 /* ManageDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDetailTableViewCell.swift; sourceTree = "<group>"; };
+		1C6ED04E2C31916D00EBED36 /* ManageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDetailView.swift; sourceTree = "<group>"; };
 		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1C991ED02C03B21400A4FB4F /* ManageView.swift */,
+				1C6ED04E2C31916D00EBED36 /* ManageDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */,
 				1CA89AC02C1899E100B8E80A /* CoreDataStack.xcdatamodeld in Sources */,
 				1CC716232C1F354E00E8F55A /* HomeViewModel.swift in Sources */,
+				1C6ED04F2C31916D00EBED36 /* ManageDetailView.swift in Sources */,
 				1CB069202BF2528F0086B88F /* HomeViewController.swift in Sources */,
 				1CA89AC32C1978D900B8E80A /* MyManageEntity+CoreDataClass.swift in Sources */,
 				1CA89AC42C1978D900B8E80A /* MyManageEntity+CoreDataProperties.swift in Sources */,
