@@ -47,6 +47,13 @@ final class ManageDetailView: UIView {
     
     private func configure() {
         self.backgroundColor = .white
+        
+        self.makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        self.addSubview(self.recentDateLabel)
+        self.addSubview(self.listTableView)
     }
 }
 
