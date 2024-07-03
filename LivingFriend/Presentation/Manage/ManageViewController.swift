@@ -20,4 +20,37 @@ final class ManageViewController: UIViewController {
         
         self.view = manageView
     }
+    
+    // MARK: - Initialize
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure
+    
+    private func configure() {
+        self.view.backgroundColor = .white
+        
+        self.setNavigationBar()
+    }
+    
+    private func setNavigationBar() {
+        let image = IconImages.x.image?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        
+        let titleLabel = UILabel()
+        titleLabel.text = TextManager.manageList_title
+        titleLabel.font = Font.Typography.bold16
+        titleLabel.textColor = .black
+        titleLabel.sizeToFit()
+        self.navigationItem.titleView = titleLabel
+        
+        self.navigationController?.navigationBar.barTintColor = .white
+    }
 }
