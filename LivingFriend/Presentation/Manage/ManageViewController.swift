@@ -42,8 +42,6 @@ final class ManageViewController: UIViewController {
     }
     
     private func setNavigationBar() {
-        let image = IconImages.x.image?.withTintColor(.black, renderingMode: .alwaysOriginal)
-        
         let titleLabel = UILabel()
         titleLabel.text = TextManager.manageList_title
         titleLabel.font = Font.Typography.bold16
