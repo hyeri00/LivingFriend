@@ -14,6 +14,7 @@ class HomeViewModel {
     var fetchedObjects: [MyManageEntity] = []
     var filteredObjects: [MyManageEntity] = []
     var recentObjects: [MyManageEntity] = []
+    var categoryObjects: [MyManageEntity] = []
     
     private var managedObjectContext: NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -51,6 +52,20 @@ class HomeViewModel {
         }
         
         self.recentObjects = Array(uniqueObjects.values)
+    }
+    
+    // MARK: - 카테고리별 데이터 가져오기
+    
+    func fetchCategoryObject(forCategory category: String, completion: @escaping () -> Void) {
+        let fetchRequest: NSFetchRequest<MyManageEntity> = MyManageEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "categoryTitle == %@", category)
+        
+        do {
+            categoryObjects = try managedObjectContext.fetch(fetchRequest)
+            completion()
+        } catch {
+            print("Failed to fetch objects: \(error)")
+        }
     }
     
     // MARK: - 데이터 날짜별로 가져오기
