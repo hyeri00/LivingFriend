@@ -31,6 +31,16 @@ final class ManageDetailTableViewCell: UITableViewCell {
         return button
     }()
     
+    // MARK: - Bind
+    
+    func bind(
+        date: String,
+        setDate: String
+    ) {
+        self.dateLabel.text = date
+        self.setDateLabel.text = setDate
+    }
+    
     // MARK: - Initialize
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
