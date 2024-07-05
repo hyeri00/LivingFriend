@@ -17,6 +17,9 @@ enum Font: String {
             return UIFont(name: font.rawValue, size: fontSize)
         }
         
+        static let bold50 = setFont(font: .bold, fontSize: 50)
+        static let air50 = setFont(font: .air, fontSize: 50)
+        
         static let bold30 = setFont(font: .bold, fontSize: 30)
         static let air30 = setFont(font: .air, fontSize: 30)
         
@@ -28,7 +31,7 @@ enum Font: String {
         
         static let bold14 = setFont(font: .bold, fontSize: 14)
         static let air14 = setFont(font: .air, fontSize: 14)
-    
+        
         static let bold12 = setFont(font: .bold, fontSize: 12)
         static let air12 = setFont(font: .air, fontSize: 12)
         
