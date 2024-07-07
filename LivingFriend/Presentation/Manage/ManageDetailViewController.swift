@@ -20,5 +20,23 @@ final class ManageDetailViewController: UIViewController {
         
         self.view = manageDetailView
     }
+    
+    // MARK: - Initialize
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configure
+    
+    private func configure() {
+        self.view.backgroundColor = .white
+    }
 }
 
