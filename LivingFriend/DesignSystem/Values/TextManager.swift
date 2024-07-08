@@ -31,4 +31,6 @@ struct TextManager {
     
     static let manageList_title = "관리 목록"
     static let manage_recently = "최근 교체일"
+    
+    static let manage_detail_title = "상세 정보 보기"
 }
