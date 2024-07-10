@@ -9,6 +9,13 @@ import UIKit
 
 final class ManageDetailTableViewCell: UITableViewCell {
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let baseMargin: CGFloat = 20
+        static let setDateLeadingSpacing: CGFloat = 50
+    }
+    
     // MARK: - UI
     
     private let dateLabel: UILabel = {
@@ -57,6 +64,28 @@ final class ManageDetailTableViewCell: UITableViewCell {
     
     private func configure() {
         self.backgroundColor = .white
+        
+        self.makeConstraints()
     }
     
+    private func makeConstraints() {
+        self.addSubview(self.dateLabel)
+        self.addSubview(self.setDateLabel)
+        self.addSubview(self.deleteButton)
+        
+        self.dateLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(Metric.baseMargin)
+            $0.centerX.equalToSuperview()
+        }
+        
+        self.setDateLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(Metric.setDateLeadingSpacing)
+            $0.centerX.equalToSuperview()
+        }
+        
+        self.deleteButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().offset(-Metric.baseMargin)
+            $0.centerX.equalToSuperview()
+        }
+    }
 }
