@@ -9,6 +9,13 @@ import UIKit
 
 final class ManageDetailView: UIView {
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let recentDateTopMargin: CGFloat = 70
+        static let tableViewTopSpacing: CGFloat = 40
+    }
+    
     // MARK: - UI
     
     private let recentDateLabel: UILabel = {
@@ -54,6 +61,16 @@ final class ManageDetailView: UIView {
     private func makeConstraints() {
         self.addSubview(self.recentDateLabel)
         self.addSubview(self.listTableView)
+        
+        self.recentDateLabel.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Metric.recentDateTopMargin)
+            $0.centerX.equalToSuperview()
+        }
+        
+        self.listTableView.snp.makeConstraints {
+            $0.top.equalTo(self.recentDateLabel.snp.bottom).offset(Metric.tableViewTopSpacing)
+            $0.bottom.leading.trailing.equalToSuperview()
+        }
     }
 }
 
