@@ -21,7 +21,7 @@ final class ManageDetailView: UIView {
     private let recentDateLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = Font.Typography.bold30
+        label.font = Font.Typography.bold50
         return label
     }()
     
