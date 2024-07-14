@@ -15,6 +15,10 @@ final class ManageDetailView: UIView {
         static let recentDateTopMargin: CGFloat = 70
         static let tableViewTopSpacing: CGFloat = 40
     }
+
+    // MARK: - Properties
+    
+    private let viewModel = HomeViewModel()
     
     // MARK: - UI
     
@@ -82,7 +86,7 @@ extension ManageDetailView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return 1
+        return self.viewModel.categoryObjects.count
     }
     
     func tableView(
@@ -91,6 +95,13 @@ extension ManageDetailView: UITableViewDelegate, UITableViewDataSource {
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ManageDetailTableViewCell",
                                                  for: indexPath) as! ManageDetailTableViewCell
+        
+        let objects = self.viewModel.categoryObjects[indexPath.row]
+        
+        cell.bind(
+            date: objects.dateText ?? "",
+            setDate: objects.periodText ?? ""
+        )
         return cell
     }
 }
