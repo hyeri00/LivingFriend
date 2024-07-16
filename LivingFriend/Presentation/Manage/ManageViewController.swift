@@ -38,7 +38,15 @@ final class ManageViewController: UIViewController {
     private func configure() {
         self.view.backgroundColor = .white
         
+        self.addConfigure()
         self.setNavigationBar()
+    }
+    
+    private func addConfigure() {
+        self.manageView.didTapTableViewAction = { [weak self] in
+            let manageDetailViewController = ManageDetailViewController()
+            self?.navigationController?.pushViewController(manageDetailViewController, animated: true)
+        }
     }
     
     private func setNavigationBar() {
