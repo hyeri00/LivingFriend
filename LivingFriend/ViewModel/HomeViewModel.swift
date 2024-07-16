@@ -21,6 +21,19 @@ class HomeViewModel {
         return appDelegate.persistentContainer.viewContext
     }
     
+    init() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(contextDidSave(_:)),
+                                               name: .NSManagedObjectContextDidSave,
+                                               object: managedObjectContext)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: .NSManagedObjectContextDidSave,
+                                                  object: managedObjectContext)
+    }
+    
     // MARK: - 모든 데이터 가져오기
     
     func fetchObjects(completion: @escaping () -> Void) {
@@ -115,4 +128,18 @@ class HomeViewModel {
             return ""
         }
     }
+    
+    // MARK: - NSManagedObjectContextDidSave Notification
+    
+    @objc private func contextDidSave(_ notification: Notification) {
+        fetchObjects {
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: .dataUpdated, object: nil)
+            }
+        }
+    }
+}
+
+extension Notification.Name {
+    static let dataUpdated = Notification.Name("dataUpdated")
 }
