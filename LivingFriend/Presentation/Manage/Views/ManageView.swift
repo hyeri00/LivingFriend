@@ -13,6 +13,8 @@ final class ManageView: UIView {
     
     private let viewModel = HomeViewModel()
     
+    var didTapTableViewAction: (() -> Void)?
+    
     // MARK: - UI
     
     lazy var manageTableView: UITableView = {
@@ -85,12 +87,19 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
                                                  for: indexPath) as! ManageTableViewCell
         
         let object = self.viewModel.recentObjects[indexPath.row]
-               
+        
         cell.bind(
             title: object.categoryTitle ?? "",
             date: object.dateText ?? ""
         )
         
         return cell
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        self.didTapTableViewAction?()
     }
 }
