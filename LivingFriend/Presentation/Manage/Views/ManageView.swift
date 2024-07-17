@@ -103,3 +103,10 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         self.didTapTableViewAction?()
     }
 }
+
+extension ManageView {
+    public func refresh() {
+        self.viewModel.filterMostRecentObjects(self.viewModel.fetchedObjects)
+        self.manageTableView.reloadData()
+    }
+}
