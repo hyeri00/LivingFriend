@@ -39,7 +39,12 @@ final class ManageViewController: UIViewController {
         self.view.backgroundColor = .white
         
         self.addConfigure()
+        self.setNoti()
         self.setNavigationBar()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .dataUpdated, object: nil)
     }
     
     private func addConfigure() {
@@ -47,6 +52,13 @@ final class ManageViewController: UIViewController {
             let manageDetailViewController = ManageDetailViewController()
             self?.navigationController?.pushViewController(manageDetailViewController, animated: true)
         }
+    }
+    
+    private func setNoti() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(dataDidUpdate),
+                                               name: .dataUpdated,
+                                               object: nil)
     }
     
     private func setNavigationBar() {
@@ -58,5 +70,11 @@ final class ManageViewController: UIViewController {
         self.navigationItem.titleView = titleLabel
         
         self.navigationController?.navigationBar.barTintColor = .white
+    }
+    
+    // MARK: - Data Update
+    
+    @objc private func dataDidUpdate() {
+        self.manageView.refresh()
     }
 }
