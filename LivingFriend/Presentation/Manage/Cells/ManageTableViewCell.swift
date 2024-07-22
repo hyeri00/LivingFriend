@@ -13,7 +13,7 @@ final class ManageTableViewCell: UITableViewCell {
     
     private enum Metric {
         static let basePadding: CGFloat = 20
-        static let manageSpacing: CGFloat = 60
+        static let manageSpacing: CGFloat = 130
     }
     
     // MARK: - UI
