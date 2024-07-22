@@ -74,9 +74,7 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        let count = self.viewModel.recentObjects.count
-        print("count: \(count)")
-        return count
+        return self.viewModel.recentObjects.count
     }
     
     func tableView(
