@@ -14,4 +14,5 @@ final class SharedData {
     private init() {}
     
     var selectedTitle: String?
+    var selectedMyManageTitle: String?
 }
