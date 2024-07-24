@@ -98,6 +98,13 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
+        let object = self.viewModel.recentObjects[indexPath.row]
+        
+        guard let categoryTitle = object.categoryTitle else {
+            return
+        }
+        
+        SharedData.shared.selectedMyManageTitle = categoryTitle
         self.didTapTableViewAction?()
     }
 }
