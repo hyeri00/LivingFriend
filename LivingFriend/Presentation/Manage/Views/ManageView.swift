@@ -98,9 +98,7 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        let object = self.viewModel.recentObjects[indexPath.row]
-        
-        guard let categoryTitle = object.categoryTitle else {
+        guard let categoryTitle = self.viewModel.recentObjects[indexPath.row].categoryTitle else {
             return
         }
         
