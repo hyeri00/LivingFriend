@@ -108,3 +108,10 @@ extension ManageDetailView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
+
+extension ManageDetailView {
+    
+    public func refresh() {
+        self.listTableView.reloadData()
+    }
+}
