@@ -74,7 +74,8 @@ final class ManageViewController: UIViewController {
     
     // MARK: - Data Update
     
-    @objc private func dataDidUpdate() {
+    @objc 
+    private func dataDidUpdate() {
         self.manageView.refresh()
     }
 }
