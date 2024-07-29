@@ -47,14 +47,17 @@ final class ManageView: UIView {
     private func configure() {
         self.backgroundColor = .white
         
+        self.fetchObject()
+        self.makeConstraints()
+    }
+    
+    private func fetchObject() {
         self.viewModel.fetchObjects {
             DispatchQueue.main.async {
                 self.viewModel.filterMostRecentObjects(self.viewModel.fetchedObjects)
                 self.manageTableView.reloadData()
             }
         }
-        
-        self.makeConstraints()
     }
     
     private func makeConstraints() {
