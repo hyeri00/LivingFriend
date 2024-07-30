@@ -9,6 +9,8 @@ import Foundation
 
 struct TextManager {
     
+    static let home_emptyState = "관리 항목이 없습니다."
+    
     static let category_appliance = "정수기 필터"
     static let category_basin = "세면대 필터"
     static let category_shower = "샤워기 필터"
