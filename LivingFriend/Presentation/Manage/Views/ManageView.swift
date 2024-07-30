@@ -30,6 +30,14 @@ final class ManageView: UIView {
         return view
     }()
     
+    private let emptyStateLabel: UILabel = {
+        let label = UILabel()
+        label.text = TextManager.home_emptyState
+        label.textColor = .black
+        label.font = Font.Typography.air20
+        return label
+    }()
+    
     // MARK: - Initialize
     
     override init(frame: CGRect) {
