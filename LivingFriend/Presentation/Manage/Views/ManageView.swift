@@ -118,6 +118,8 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - Refresh
+
 extension ManageView {
     public func refresh() {
         self.viewModel.filterMostRecentObjects(self.viewModel.fetchedObjects)
