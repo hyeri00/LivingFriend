@@ -24,8 +24,8 @@ struct CategoryData {
         CategoryItem.item(id: 06, image: IconImages.sink.image!, title: TextManager.category_sink)
     ]
     
-//    mutating func addItem(image: UIImage, title: String) {
-//        let newItem = CategoryItem.item(id: <#Int#>, image: image, title: title)
-//        self.categoryData.append(newItem)
-//    }
+    mutating func addCategoryData(image: UIImage, title: String) {
+        let newItem = CategoryItem.item(id: <#Int#>, image: image, title: title)
+        self.categoryData.append(newItem)
+    }
 }
