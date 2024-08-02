@@ -34,7 +34,7 @@ final class ManageView: UIView {
         let label = UILabel()
         label.text = TextManager.home_emptyState
         label.textColor = .black
-        label.font = Font.Typography.air20
+        label.font = Font.Typography.air14
         return label
     }()
     
