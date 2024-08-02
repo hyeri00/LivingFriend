@@ -70,9 +70,14 @@ final class ManageView: UIView {
     
     private func makeConstraints() {
         self.addSubview(self.manageTableView)
+        self.addSubview(self.emptyStateLabel)
         
         self.manageTableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        
+        self.emptyStateLabel.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
         }
     }
 }
