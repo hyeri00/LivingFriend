@@ -36,6 +36,7 @@ final class ManageView: UIView {
         label.textColor = .black
         label.font = Font.Typography.air14
         label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
