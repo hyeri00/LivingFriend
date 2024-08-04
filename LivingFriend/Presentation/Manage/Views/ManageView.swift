@@ -32,7 +32,7 @@ final class ManageView: UIView {
     
     private let emptyStateLabel: UILabel = {
         let label = UILabel()
-        label.text = TextManager.home_emptyState
+        label.text = TextManager.manage_emptyState
         label.textColor = .black
         label.font = Font.Typography.air14
         label.numberOfLines = 0
