@@ -85,6 +85,14 @@ final class HomeView: UIView {
         return button
     }()
     
+    private let emptyStateLabel: UILabel = {
+        let label = UILabel()
+        label.text = TextManager.home_emptyState
+        label.textColor = .black
+        label.font = Font.Typography.air12
+        return label
+    }()
+    
     // MARK: - Initialize
     
     override init(frame: CGRect) {
