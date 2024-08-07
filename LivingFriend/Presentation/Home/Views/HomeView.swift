@@ -154,6 +154,12 @@ final class HomeView: UIView {
             $0.trailing.equalToSuperview().inset(Metric.plusButtonTrailingMargin)
             $0.width.height.equalTo(Metric.plusButtonSize)
         }
+        
+        self.emptyStateLabel.snp.makeConstraints {
+            $0.top.equalTo(self.calendar.snp.bottom).offset(Metric.tableViewTopSpacing)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
+        }
     }
 }
 
