@@ -129,7 +129,7 @@ final class HomeView: UIView {
         self.calendar.addSubview(self.searchButton)
         self.addSubview(self.listTableView)
         self.addSubview(self.plusButton)
-        self.addSubview(self.emptyStateLabel)
+        self.listTableView.addSubview(self.emptyStateLabel)
         
         self.calendar.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(-Metric.calendarTopMargin)
