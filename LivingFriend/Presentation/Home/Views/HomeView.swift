@@ -156,9 +156,7 @@ final class HomeView: UIView {
         }
         
         self.emptyStateLabel.snp.makeConstraints {
-            $0.top.equalTo(self.calendar.snp.bottom).offset(Metric.tableViewTopSpacing)
-            $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalTo(self.safeAreaLayoutGuide.snp.bottom)
+            $0.center.equalToSuperview()
         }
     }
 }
