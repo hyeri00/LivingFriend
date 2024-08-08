@@ -217,6 +217,7 @@ extension HomeView: FSCalendarDelegate {
         self.viewModel.getFilteredObject(for: selectedDate) {
             DispatchQueue.main.async {
                 self.listTableView.reloadData()
+                self.emptyStateLabel.isHidden = self.viewModel.filteredObjects.count > 0
             }
         }
     }
