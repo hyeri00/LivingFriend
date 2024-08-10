@@ -79,7 +79,7 @@ final class ManageView: UIView {
         }
         
         self.emptyStateLabel.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
+            $0.center.equalToSuperview()
         }
     }
 }
