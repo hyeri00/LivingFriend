@@ -66,6 +66,7 @@ final class ManageView: UIView {
             DispatchQueue.main.async {
                 self.viewModel.filterMostRecentObjects(self.viewModel.fetchedObjects)
                 self.manageTableView.reloadData()
+                self.emptyStateLabel.isHidden = self.viewModel.recentObjects.count > 0
             }
         }
     }
@@ -131,6 +132,5 @@ extension ManageView {
     public func refresh() {
         self.viewModel.filterMostRecentObjects(self.viewModel.fetchedObjects)
         self.manageTableView.reloadData()
-        self.emptyStateLabel.isHidden = self.viewModel.recentObjects.count > 0
     }
 }
