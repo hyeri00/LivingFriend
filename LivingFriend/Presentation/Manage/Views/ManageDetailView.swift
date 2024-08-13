@@ -22,6 +22,14 @@ final class ManageDetailView: UIView {
     
     // MARK: - UI
     
+    private let manageLabel: UILabel = {
+        let label = UILabel()
+        label.text = TextManager.manage_recently
+        label.textColor = .red
+        label.font = Font.Typography.air12
+        return label
+    }()
+    
     private let recentDateLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
