@@ -15,7 +15,7 @@ final class ManageDetailView: UIView {
         static let recentDateTopMargin: CGFloat = 70
         static let tableViewTopSpacing: CGFloat = 40
     }
-
+    
     // MARK: - Properties
     
     private let viewModel = HomeViewModel()
@@ -58,6 +58,12 @@ final class ManageDetailView: UIView {
     
     private func configure() {
         self.backgroundColor = .white
+        
+        self.viewModel.fetchCategoryObject(forCategory: SharedData.shared.selectedMyManageTitle ?? "") {
+            DispatchQueue.main.async {
+                self.refresh()
+            }
+        }
         
         self.makeConstraints()
     }
