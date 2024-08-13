@@ -13,7 +13,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
     
     private enum Metric {
         static let baseMargin: CGFloat = 20
-        static let setDateLeadingSpacing: CGFloat = 50
+        static let setDateLeadingSpacing: CGFloat = 30
     }
     
     // MARK: - UI
@@ -75,17 +75,17 @@ final class ManageDetailTableViewCell: UITableViewCell {
         
         self.dateLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(Metric.baseMargin)
-            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
         }
         
         self.setDateLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(Metric.setDateLeadingSpacing)
-            $0.centerX.equalToSuperview()
+            $0.leading.equalTo(self.dateLabel.snp.trailing).offset(Metric.setDateLeadingSpacing)
+            $0.centerY.equalToSuperview()
         }
         
         self.deleteButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().offset(-Metric.baseMargin)
-            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview()
         }
     }
 }
