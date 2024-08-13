@@ -27,7 +27,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
     
     private let setDateLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .red
         label.font = Font.Typography.air12
         return label
     }()
