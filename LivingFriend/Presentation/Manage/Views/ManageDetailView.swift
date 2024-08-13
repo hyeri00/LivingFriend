@@ -109,6 +109,8 @@ extension ManageDetailView: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - Refresh
+
 extension ManageDetailView {
     
     public func refresh() {
