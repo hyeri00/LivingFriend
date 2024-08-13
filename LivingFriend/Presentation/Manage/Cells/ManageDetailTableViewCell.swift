@@ -13,7 +13,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
     
     private enum Metric {
         static let baseMargin: CGFloat = 20
-        static let setDateLeadingSpacing: CGFloat = 30
+        static let setDateLeadingSpacing: CGFloat = 110
     }
     
     // MARK: - UI
@@ -79,7 +79,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
         }
         
         self.setDateLabel.snp.makeConstraints {
-            $0.leading.equalTo(self.dateLabel.snp.trailing).offset(Metric.setDateLeadingSpacing)
+            $0.leading.equalToSuperview().offset(Metric.setDateLeadingSpacing)
             $0.centerY.equalToSuperview()
         }
         
