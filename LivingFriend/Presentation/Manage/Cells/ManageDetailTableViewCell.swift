@@ -14,6 +14,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
     private enum Metric {
         static let baseMargin: CGFloat = 20
         static let setDateLeadingSpacing: CGFloat = 110
+        static let buttonSize: CGFloat = 14
     }
     
     // MARK: - UI
@@ -86,6 +87,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
         self.deleteButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().offset(-Metric.baseMargin)
             $0.centerY.equalToSuperview()
+            $0.width.height.equalTo(Metric.buttonSize)
         }
     }
 }
