@@ -106,7 +106,7 @@ extension ManageDetailView: UITableViewDelegate, UITableViewDataSource {
         
         cell.bind(
             date: objects.dateText ?? "",
-            setDate: objects.periodText ?? ""
+            setDate: objects.periodText! + "일"
         )
         
         self.recentDateLabel.text = objects.dateText
