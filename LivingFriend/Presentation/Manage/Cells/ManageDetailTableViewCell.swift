@@ -65,6 +65,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
     
     private func configure() {
         self.backgroundColor = .white
+        self.selectionStyle = .none
         
         self.makeConstraints()
     }
