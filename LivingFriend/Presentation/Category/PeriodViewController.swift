@@ -37,9 +37,23 @@ final class PeriodViewController: UIViewController {
     
     private func configure() {
         
+        self.addConfigure()
         self.setNavigationBar()
     }
     
+    private func addConfigure() {
+        self.periodView.didConfirmTapAction = {
+            DispatchQueue.main.async {
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                      let window = windowScene.windows.first(where: { $0.isKeyWindow }),
+                      let tabBarController = window.rootViewController as? UITabBarController else { return }
+
+                tabBarController.selectedIndex = 0
+                tabBarController.presentedViewController?.dismiss(animated: true)
+            }
+        }
+    }
+
     private func setNavigationBar() {
         let image = IconImages.back.image?.withTintColor(.black, renderingMode: .alwaysOriginal)
         
