@@ -110,6 +110,21 @@ class HomeViewModel {
         }
     }
     
+    // MARK: - 보관함에서 저장된 데이터 삭제하기
+    
+    func deleteMyManageObject(at indexPath: IndexPath, completion: @escaping () -> Void) {
+        let objectToDelete = self.categoryObjects[indexPath.row]
+        managedObjectContext.delete(objectToDelete)
+        
+        do {
+            try managedObjectContext.save()
+            self.categoryObjects.remove(at: indexPath.row)
+            completion()
+        } catch {
+            print("Failed to delete object: \(error)")
+        }
+    }
+    
     // MARK: - 날짜 변환
     
     func calculateDate(from dateText: String, withPeriod periodText: String) -> String {
