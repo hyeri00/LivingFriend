@@ -40,7 +40,6 @@ final class ManageDetailTableViewCell: UITableViewCell {
     private let deleteButton: UIButton = {
         let button = UIButton()
         button.setImage(IconImages.delete.image, for: .normal)
-        button.isHidden = true // TODO: 기능 구현
         return button
     }()
     
