@@ -114,8 +114,23 @@ final class HomeView: UIView {
             self?.listTableView.reloadData()
         }
         
+        self.getToday()
         self.addConfigure()
         self.makeConstraints()
+    }
+    
+    private func getToday() {
+        let today = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let todayString = dateFormatter.string(from: today)
+        
+        self.viewModel.getFilteredObject(for: todayString) { [weak self] in
+            DispatchQueue.main.async {
+                self?.listTableView.reloadData()
+                self?.emptyStateLabel.isHidden = self?.viewModel.filteredObjects.count ?? 0 > 0
+            }
+        }
     }
     
     private func addConfigure() {
