@@ -9,6 +9,10 @@ import UIKit
 
 final class ManageDetailTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
+
+    var didTapDeleteAction: (() -> Void)?
+    
     // MARK: - Metric
     
     private enum Metric {
