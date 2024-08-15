@@ -42,7 +42,7 @@ final class ManageDetailView: UIView {
         let view = UITableView()
         view.rowHeight = 52
         view.backgroundColor = .white
-//        view.separatorStyle = .none
+        //        view.separatorStyle = .none
         
         view.delegate = self
         view.dataSource = self
@@ -122,6 +122,14 @@ extension ManageDetailView: UITableViewDelegate, UITableViewDataSource {
             date: objects.dateText ?? "",
             setDate: objects.periodText! + "일"
         )
+        
+        cell.didTapDeleteAction = { [weak self] in
+            self?.viewModel.deleteMyManageObject(at: indexPath) {
+                DispatchQueue.main.async {
+                    self?.listTableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            }
+        }
         
         self.recentDateLabel.text = objects.dateText
         
