@@ -72,7 +72,14 @@ final class ManageDetailTableViewCell: UITableViewCell {
         self.backgroundColor = .white
         self.selectionStyle = .none
         
+        self.addConfigure()
         self.makeConstraints()
+    }
+    
+    private func addConfigure() {
+        self.deleteButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.didTapDeleteAction?()
+        }), for: .touchUpInside)
     }
     
     private func makeConstraints() {
