@@ -42,7 +42,7 @@ final class ManageDetailView: UIView {
         let view = UITableView()
         view.rowHeight = 52
         view.backgroundColor = .white
-        view.separatorStyle = .none
+//        view.separatorStyle = .none
         
         view.delegate = self
         view.dataSource = self
