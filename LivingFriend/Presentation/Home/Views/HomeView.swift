@@ -238,6 +238,23 @@ extension HomeView: FSCalendarDelegate {
     }
 }
 
+// MARK: - FSCalendarDelegateAppearance
+
+extension HomeView: FSCalendarDelegateAppearance {
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: date)
+        
+        if viewModel.hasData(for: dateString) {
+            return .lightGray
+        }
+        
+        return nil
+    }
+}
+
 // MARK: - Refresh
 
 extension HomeView {
