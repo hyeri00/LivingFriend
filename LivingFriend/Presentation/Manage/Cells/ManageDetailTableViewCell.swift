@@ -84,7 +84,7 @@ final class ManageDetailTableViewCell: UITableViewCell {
     private func makeConstraints() {
         self.addSubview(self.dateLabel)
         self.addSubview(self.setDateLabel)
-        self.addSubview(self.deleteButton)
+        self.contentView.addSubview(self.deleteButton)
         
         self.dateLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(Metric.baseMargin)
