@@ -111,7 +111,7 @@ final class HomeView: UIView {
         self.backgroundColor = .white
         
         self.viewModel.fetchObjects { [weak self] in
-            self?.listTableView.reloadData()
+            self?.refresh()
         }
         
         self.getToday()
@@ -127,7 +127,7 @@ final class HomeView: UIView {
         
         self.viewModel.getFilteredObject(for: todayString) { [weak self] in
             DispatchQueue.main.async {
-                self?.listTableView.reloadData()
+                self?.refresh()
                 self?.emptyStateLabel.isHidden = self?.viewModel.filteredObjects.count ?? 0 > 0
             }
         }
@@ -235,5 +235,14 @@ extension HomeView: FSCalendarDelegate {
                 self.emptyStateLabel.isHidden = self.viewModel.filteredObjects.count > 0
             }
         }
+    }
+}
+
+// MARK: - Refresh
+
+extension HomeView {
+    
+    public func refresh() {
+        self.listTableView.reloadData()
     }
 }
