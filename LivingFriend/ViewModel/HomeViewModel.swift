@@ -153,6 +153,12 @@ class HomeViewModel {
             }
         }
     }
+    
+    // MARK: - 데이터가 존재하는 지 확인
+    
+    func hasData(for date: String) -> Bool {
+        return self.fetchedObjects.contains(where: { $0.dateText == date })
+    }
 }
 
 extension Notification.Name {
