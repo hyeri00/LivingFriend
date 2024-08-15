@@ -9,7 +9,7 @@ import UIKit
 
 class ToastMessage {
     
-    func showToast(image: UIImage, message: String) {
+    func showToast(image: UIImage?, message: String) {
         
         let toastView = UIView()
         
@@ -21,7 +21,7 @@ class ToastMessage {
             window.addSubview(toastView)
             window.bringSubviewToFront(toastView)
             
-            toastView.snp.makeConstraints{
+            toastView.snp.makeConstraints {
                 $0.width.equalTo(327)
                 $0.height.equalTo(58)
                 $0.centerX.equalToSuperview()
@@ -30,7 +30,13 @@ class ToastMessage {
             
             let img = UIImageView()
             toastView.addSubview(img)
-            img.image = image
+            
+            if let unwrappedImage = image {
+                img.image = unwrappedImage
+            } else {
+                img.image = UIImage(named: "defaultImage")
+            }
+            
             img.snp.makeConstraints {
                 $0.left.equalTo(30)
                 $0.centerY.equalToSuperview()
