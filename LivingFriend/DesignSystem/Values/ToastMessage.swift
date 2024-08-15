@@ -13,7 +13,9 @@ class ToastMessage {
         
         let toastView = UIView()
         
-        if let window = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first {
+        if let windowScene = UIApplication.shared.connectedScenes.first(where: { $0 is UIWindowScene }) as? UIWindowScene,
+           let window = windowScene.windows.first(where: { $0.isKeyWindow }) {
+            
             toastView.backgroundColor = .white
             toastView.clipsToBounds = true
             toastView.layer.cornerRadius = 30
@@ -31,11 +33,7 @@ class ToastMessage {
             let img = UIImageView()
             toastView.addSubview(img)
             
-            if let unwrappedImage = image {
-                img.image = unwrappedImage
-            } else {
-                img.image = UIImage(named: "defaultImage")
-            }
+            img.image = image ?? UIImage(named: "defaultImage")
             
             img.snp.makeConstraints {
                 $0.left.equalTo(30)
@@ -58,7 +56,7 @@ class ToastMessage {
             
             UIView.animate(withDuration: 2.0, delay: 0.0, options: [.curveEaseIn], animations: {
                 toastView.alpha = 0.0
-            }, completion: {(isCompleted) in
+            }, completion: { _ in
                 toastView.removeFromSuperview()
             })
         }
