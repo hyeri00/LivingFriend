@@ -16,6 +16,7 @@ final class HomeView: UIView {
     private let viewModel = HomeViewModel()
     
     var didTapPlusButtonAction: (() -> Void)?
+    private var selectedDate: String = ""
     
     // MARK: - Metric
     
@@ -248,7 +249,7 @@ extension HomeView: FSCalendarDelegateAppearance {
         let dateString = dateFormatter.string(from: date)
         
         if viewModel.hasData(for: dateString) {
-            return .lightGray
+            return .systemGray3
         }
         
         return nil
