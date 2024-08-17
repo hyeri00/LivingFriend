@@ -209,7 +209,7 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
         )
         
         cell.deleteAction = { [weak self] in
-            self?.viewModel.deleteObject(at: indexPath) {
+            self?.viewModel.deleteObject(at: indexPath) {_ in 
                 self?.viewModel.filteredObjects.remove(at: indexPath.row)
                 DispatchQueue.main.async {
                     self?.listTableView.deleteRows(at: [indexPath], with: .automatic)
