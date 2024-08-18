@@ -24,4 +24,11 @@ final class ManageWholeTableViewCell: UITableViewCell {
         label.font = Font.Typography.air12
         return label
     }()
+    
+    private let dateLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = Font.Typography.air14
+        return label
+    }()
 }
