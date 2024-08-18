@@ -65,6 +65,38 @@ final class ManageWholeView: UIView {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension ManageWholeView: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        let count = viewModel.fetchedObjects.count
+        print("All Count: \(count)")
+        return count
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ManageWholeTableViewCell",
+                                                 for: indexPath) as! ManageWholeTableViewCell
+        
+        let object = self.viewModel.fetchedObjects[indexPath.row]
+        
+        cell.bind(
+            title: object.categoryTitle ?? "",
+            setDate: object.periodText!+"일",
+            date: object.dateText ?? ""
+        )
+        
+        return cell
+    }
+}
+
 // MARK: - Refresh
 
 extension ManageWholeView {
