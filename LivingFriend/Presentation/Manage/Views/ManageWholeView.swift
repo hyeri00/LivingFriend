@@ -9,6 +9,10 @@ import UIKit
 
 final class ManageWholeView: UIView {
     
+    // MARK: - Properties
+    
+    private let viewModel = HomeViewModel()
+    
     // MARK: - UI
     
     private lazy var manageTableView: UITableView = {
@@ -40,6 +44,16 @@ final class ManageWholeView: UIView {
     
     private func configure() {
         self.backgroundColor = .white
+        
+        self.setViewModel()
+        self.makeConstraints()
+    }
+    
+    private func setViewModel() {
+        
+        self.viewModel.fetchObjects { [weak self] in
+            self?.refresh()
+        }
     }
     
     private func makeConstraints() {
