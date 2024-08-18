@@ -54,7 +54,8 @@ final class ManageViewController: UIViewController {
         }
         
         self.manageView.didTapWholeButtonAction = { [weak self] in
-            
+            let manageWholeViewController = ManageWholeViewController()
+            self?.navigationController?.pushViewController(manageWholeViewController, animated: true)
         }
     }
     
