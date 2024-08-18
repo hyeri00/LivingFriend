@@ -30,6 +30,12 @@ final class ManageView: UIView {
         return view
     }()
     
+    private let separatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .darkGray
+        return view
+    }()
+    
     private let emptyStateLabel: UILabel = {
         let label = UILabel()
         label.text = TextManager.manage_emptyState
