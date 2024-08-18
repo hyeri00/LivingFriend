@@ -123,8 +123,7 @@ final class ManageView: UIView {
         
         self.wholeButton.snp.makeConstraints {
             $0.top.equalTo(self.separatorView.snp.bottom).offset(Metric.wholeButtonTopSpacing)
-            $0.leading.equalTo(self.separatorView.snp.leading).offset(Metr
-                .wholeButtonLeadingSpacing)
+            $0.leading.equalTo(self.separatorView.snp.leading).offset(Metric.wholeButtonLeadingSpacing)
         }
         
         self.emptyStateLabel.snp.makeConstraints {
