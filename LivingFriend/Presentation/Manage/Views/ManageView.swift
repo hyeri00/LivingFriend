@@ -82,11 +82,19 @@ final class ManageView: UIView {
         self.addSubview(self.emptyStateLabel)
         
         self.manageTableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(self.manageTableView.contentSize.height)
         }
         
         self.emptyStateLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+        }
+    }
+    
+    private func updateHeight() {
+        self.manageTableView.snp.updateConstraints {
+            $0.height.equalTo(self.manageTableView.contentSize.height)
         }
     }
 }
@@ -99,6 +107,7 @@ extension ManageView: UITableViewDelegate, UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
+        self.updateHeight()
         return self.viewModel.recentObjects.count
     }
     
