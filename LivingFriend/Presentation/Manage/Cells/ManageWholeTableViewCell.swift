@@ -39,6 +39,18 @@ final class ManageWholeTableViewCell: UITableViewCell {
         return label
     }()
     
+    // MARK: - Bind
+    
+    func bind(
+        title: String,
+        setDate: String,
+        date: String
+    ) {
+        self.titleLabel.text = title
+        self.setDateLabel.text = setDate
+        self.dateLabel.text = date
+    }
+    
     // MARK: - Initialize
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
