@@ -21,6 +21,7 @@
 		1C6ED0562C71C2C000EBED36 /* ManageWholeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0552C71C2C000EBED36 /* ManageWholeTableViewCell.swift */; };
 		1C6ED0582C71CAC500EBED36 /* ManageWholeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0572C71CAC500EBED36 /* ManageWholeView.swift */; };
 		1C6ED05A2C71CBFD00EBED36 /* ManageWholeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0592C71CBFD00EBED36 /* ManageWholeViewController.swift */; };
+		1C6ED0602C71E10600EBED36 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED05F2C71E10600EBED36 /* Coordinator.swift */; };
 		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
@@ -62,6 +63,7 @@
 		1C6ED0552C71C2C000EBED36 /* ManageWholeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWholeTableViewCell.swift; sourceTree = "<group>"; };
 		1C6ED0572C71CAC500EBED36 /* ManageWholeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWholeView.swift; sourceTree = "<group>"; };
 		1C6ED0592C71CBFD00EBED36 /* ManageWholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWholeViewController.swift; sourceTree = "<group>"; };
+		1C6ED05F2C71E10600EBED36 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 				1C6ED0482C2FE3B100EBED36 /* NavigationControllerRecognizer.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1C6ED05E2C71E0FF00EBED36 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1C6ED05F2C71E10600EBED36 /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		1C991EC82BFCD5D100A4FB4F /* Utils */ = {
@@ -187,6 +197,7 @@
 		1CB068F52BED3D220086B88F /* LivingFriend */ = {
 			isa = PBXGroup;
 			children = (
+				1C6ED05E2C71E0FF00EBED36 /* Coordinator */,
 				1C6ED0472C2FE38B00EBED36 /* Extension */,
 				1CC7161C2C1D74DA00E8F55A /* ViewModel */,
 				1CA89AC52C1978F200B8E80A /* Data */,
@@ -403,6 +414,7 @@
 				1C6ED0562C71C2C000EBED36 /* ManageWholeTableViewCell.swift in Sources */,
 				1C6ED0542C6E00F000EBED36 /* ToastMessage.swift in Sources */,
 				1C6ED0492C2FE3B100EBED36 /* NavigationControllerRecognizer.swift in Sources */,
+				1C6ED0602C71E10600EBED36 /* Coordinator.swift in Sources */,
 				1C06FB052BF3DAB6004F35BB /* PeriodView.swift in Sources */,
 				1C06FB072BFB3C4B004F35BB /* PeriodViewController.swift in Sources */,
 				1C6ED0582C71CAC500EBED36 /* ManageWholeView.swift in Sources */,
