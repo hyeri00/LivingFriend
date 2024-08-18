@@ -21,6 +21,12 @@ final class HomeViewController: UIViewController {
         self.view = homeView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.homeView.refresh()
+    }
+    
     // MARK: - Initialize
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
