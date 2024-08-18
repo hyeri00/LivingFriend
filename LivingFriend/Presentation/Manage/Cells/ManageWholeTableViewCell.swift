@@ -48,5 +48,13 @@ final class ManageWholeTableViewCell: UITableViewCell {
     
     private func configure() {
         self.backgroundColor = .white
+        
+        self.makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        self.addSubview(self.titleLabel)
+        self.addSubview(self.setDateLabel)
+        self.addSubview(self.dateLabel)
     }
 }
