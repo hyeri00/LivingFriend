@@ -17,4 +17,11 @@ final class ManageWholeTableViewCell: UITableViewCell {
         label.font = Font.Typography.air14
         return label
     }()
+    
+    private let setDateLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .red
+        label.font = Font.Typography.air12
+        return label
+    }()
 }
