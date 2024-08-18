@@ -52,6 +52,10 @@ final class ManageViewController: UIViewController {
             let manageDetailViewController = ManageDetailViewController()
             self?.navigationController?.pushViewController(manageDetailViewController, animated: true)
         }
+        
+        self.manageView.didTapWholeButtonAction = { [weak self] in
+            
+        }
     }
     
     private func setNoti() {
