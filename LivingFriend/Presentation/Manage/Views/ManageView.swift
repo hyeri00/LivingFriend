@@ -14,6 +14,7 @@ final class ManageView: UIView {
     private let viewModel = HomeViewModel()
     
     var didTapTableViewAction: (() -> Void)?
+    var didTapWholeButtonAction: (() -> Void)?
     
     // MARK: - Metric
     
@@ -82,6 +83,7 @@ final class ManageView: UIView {
         self.backgroundColor = .white
         
         self.fetchObject()
+        self.addConfigure()
         self.makeConstraints()
     }
     
@@ -93,6 +95,12 @@ final class ManageView: UIView {
                 self.emptyStateLabel.isHidden = self.viewModel.recentObjects.count > 0
             }
         }
+    }
+    
+    private func addConfigure() {
+        self.wholeButton.addAction(UIAction(handler: { [weak self] _ in
+            self?.didTapWholeButtonAction?()
+        }), for: .touchUpInside)
     }
     
     private func makeConstraints() {
