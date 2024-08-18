@@ -44,6 +44,14 @@ final class ManageView: UIView {
         return view
     }()
     
+    private let wholeButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("전체 보기", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = Font.Typography.air14
+        return button
+    }()
+    
     private let emptyStateLabel: UILabel = {
         let label = UILabel()
         label.text = TextManager.manage_emptyState
