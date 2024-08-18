@@ -64,3 +64,12 @@ final class ManageWholeView: UIView {
         }
     }
 }
+
+// MARK: - Refresh
+
+extension ManageWholeView {
+    
+    public func refresh() {
+        self.manageTableView.reloadData()
+    }
+}
