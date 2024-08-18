@@ -9,6 +9,13 @@ import UIKit
 
 final class ManageWholeTableViewCell: UITableViewCell {
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let basePadding: CGFloat = 20
+        static let setDateSpacing: CGFloat = 130
+    }
+    
     // MARK: - UI
     
     private let titleLabel: UILabel = {
@@ -56,5 +63,20 @@ final class ManageWholeTableViewCell: UITableViewCell {
         self.addSubview(self.titleLabel)
         self.addSubview(self.setDateLabel)
         self.addSubview(self.dateLabel)
+        
+        self.titleLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(Metric.basePadding)
+            $0.centerY.equalToSuperview()
+        }
+        
+        self.setDateLabel.snp.makeConstraints {
+            $0.trailing.equalToSuperview().offset(-Metric.setDateSpacing)
+            $0.centerY.equalToSuperview()
+        }
+        
+        self.dateLabel.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(Metric.basePadding)
+            $0.centerY.equalToSuperview()
+        }
     }
 }
