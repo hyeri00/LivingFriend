@@ -17,7 +17,7 @@ final class ManageView: UIView {
     
     // MARK: - UI
     
-    lazy var manageTableView: UITableView = {
+    private lazy var manageTableView: UITableView = {
         let view = UITableView()
         view.rowHeight = 52
         view.backgroundColor = .white
