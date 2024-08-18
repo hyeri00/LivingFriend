@@ -47,6 +47,6 @@ final class ManageWholeTableViewCell: UITableViewCell {
     // MARK: - Configure
     
     private func configure() {
-        
+        self.backgroundColor = .white
     }
 }
