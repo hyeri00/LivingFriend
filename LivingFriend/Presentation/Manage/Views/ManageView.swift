@@ -21,6 +21,8 @@ final class ManageView: UIView {
         static let separatorTopSpacing: CGFloat = 10
         static let separatorLRSpacing: CGFloat = 20
         static let separatorHeight: CGFloat = 1
+        static let wholeButtonTopSpacing: CGFloat = 15
+        static let wholeButtonLeadingSpacing: CGFloat = 2
     }
     
     // MARK: - UI
@@ -96,6 +98,7 @@ final class ManageView: UIView {
     private func makeConstraints() {
         self.addSubview(self.manageTableView)
         self.addSubview(self.separatorView)
+        self.addSubview(self.wholeButton)
         self.addSubview(self.emptyStateLabel)
         
         self.manageTableView.snp.makeConstraints {
@@ -108,6 +111,12 @@ final class ManageView: UIView {
             $0.top.equalTo(self.manageTableView.snp.bottom).offset(Metric.separatorTopSpacing)
             $0.leading.trailing.equalToSuperview().inset(Metric.separatorLRSpacing)
             $0.height.equalTo(Metric.separatorHeight)
+        }
+        
+        self.wholeButton.snp.makeConstraints {
+            $0.top.equalTo(self.separatorView.snp.bottom).offset(Metric.wholeButtonTopSpacing)
+            $0.leading.equalTo(self.separatorView.snp.leading).offset(Metr
+                .wholeButtonLeadingSpacing)
         }
         
         self.emptyStateLabel.snp.makeConstraints {
