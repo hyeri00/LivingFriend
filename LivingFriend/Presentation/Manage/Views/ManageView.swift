@@ -15,6 +15,14 @@ final class ManageView: UIView {
     
     var didTapTableViewAction: (() -> Void)?
     
+    // MARK: - Metric
+    
+    private enum Metric {
+        static let separatorTopSpacing: CGFloat = 10
+        static let separatorLRSpacing: CGFloat = 20
+        static let separatorHeight: CGFloat = 1
+    }
+    
     // MARK: - UI
     
     private lazy var manageTableView: UITableView = {
@@ -79,12 +87,19 @@ final class ManageView: UIView {
     
     private func makeConstraints() {
         self.addSubview(self.manageTableView)
+        self.addSubview(self.separatorView)
         self.addSubview(self.emptyStateLabel)
         
         self.manageTableView.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(self.manageTableView.contentSize.height)
+        }
+        
+        self.separatorView.snp.makeConstraints {
+            $0.top.equalTo(self.manageTableView.snp.bottom).offset(Metric.separatorTopSpacing)
+            $0.leading.trailing.equalToSuperview().inset(Metric.separatorLRSpacing)
+            $0.height.equalTo(Metric.separatorHeight)
         }
         
         self.emptyStateLabel.snp.makeConstraints {
