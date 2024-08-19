@@ -125,9 +125,17 @@
 			isa = PBXGroup;
 			children = (
 				1C6ED05F2C71E10600EBED36 /* Coordinator.swift */,
-				1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */,
+				1C6ED0632C737BA600EBED36 /* Home */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1C6ED0632C737BA600EBED36 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		1C991EC82BFCD5D100A4FB4F /* Utils */ = {

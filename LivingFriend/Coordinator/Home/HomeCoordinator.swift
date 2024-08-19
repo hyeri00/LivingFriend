@@ -22,6 +22,9 @@ final class HomeCoordinator: Coordinator {
     }
     
     func showCategory() {
-        // TODO: - CategoryCoordinator 연결
+        let categoryCoordinator = CategoryCoordinator(
+            navigationController: self.navigationController
+        )
+        categoryCoordinator.start()
     }
 }
