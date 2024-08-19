@@ -23,6 +23,7 @@
 		1C6ED05A2C71CBFD00EBED36 /* ManageWholeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0592C71CBFD00EBED36 /* ManageWholeViewController.swift */; };
 		1C6ED0602C71E10600EBED36 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED05F2C71E10600EBED36 /* Coordinator.swift */; };
 		1C6ED0622C71E19300EBED36 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */; };
+		1C6ED0662C737BDD00EBED36 /* CategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */; };
 		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
@@ -66,6 +67,7 @@
 		1C6ED0592C71CBFD00EBED36 /* ManageWholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageWholeViewController.swift; sourceTree = "<group>"; };
 		1C6ED05F2C71E10600EBED36 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoordinator.swift; sourceTree = "<group>"; };
 		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				1C6ED05F2C71E10600EBED36 /* Coordinator.swift */,
 				1C6ED0632C737BA600EBED36 /* Home */,
+				1C6ED0642C737BCD00EBED36 /* Category */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -136,6 +139,14 @@
 				1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1C6ED0642C737BCD00EBED36 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		1C991EC82BFCD5D100A4FB4F /* Utils */ = {
@@ -425,6 +436,7 @@
 				1C991ED52C0896BE00A4FB4F /* ManageViewController.swift in Sources */,
 				1C6ED0562C71C2C000EBED36 /* ManageWholeTableViewCell.swift in Sources */,
 				1C6ED0542C6E00F000EBED36 /* ToastMessage.swift in Sources */,
+				1C6ED0662C737BDD00EBED36 /* CategoryCoordinator.swift in Sources */,
 				1C6ED0492C2FE3B100EBED36 /* NavigationControllerRecognizer.swift in Sources */,
 				1C6ED0602C71E10600EBED36 /* Coordinator.swift in Sources */,
 				1C06FB052BF3DAB6004F35BB /* PeriodView.swift in Sources */,
