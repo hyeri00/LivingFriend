@@ -24,6 +24,7 @@
 		1C6ED0602C71E10600EBED36 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED05F2C71E10600EBED36 /* Coordinator.swift */; };
 		1C6ED0622C71E19300EBED36 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */; };
 		1C6ED0662C737BDD00EBED36 /* CategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */; };
+		1C6ED0682C747BD600EBED36 /* PeriodCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0672C747BD600EBED36 /* PeriodCoordinator.swift */; };
 		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
@@ -68,6 +69,7 @@
 		1C6ED05F2C71E10600EBED36 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoordinator.swift; sourceTree = "<group>"; };
+		1C6ED0672C747BD600EBED36 /* PeriodCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodCoordinator.swift; sourceTree = "<group>"; };
 		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */,
+				1C6ED0672C747BD600EBED36 /* PeriodCoordinator.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				1C6ED0582C71CAC500EBED36 /* ManageWholeView.swift in Sources */,
 				1C06FB032BF3D7A1004F35BB /* CategoryViewController.swift in Sources */,
 				1CB069102BED48170086B88F /* HomeView.swift in Sources */,
+				1C6ED0682C747BD600EBED36 /* PeriodCoordinator.swift in Sources */,
 				1CC7161E2C1D74F600E8F55A /* PeriodViewModel.swift in Sources */,
 				1CB068F72BED3D220086B88F /* AppDelegate.swift in Sources */,
 				1C6ED04D2C318FB200EBED36 /* ManageDetailTableViewCell.swift in Sources */,
