@@ -22,6 +22,9 @@ final class CategoryCoordinator: Coordinator {
     }
     
     func showPeriod() {
-        // TODO: - Period 연결
+        let periodCoordinator = PeriodCoordinator(
+            navigationController: navigationController
+        )
+        periodCoordinator.start()
     }
 }
