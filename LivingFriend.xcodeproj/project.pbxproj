@@ -25,6 +25,7 @@
 		1C6ED0622C71E19300EBED36 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */; };
 		1C6ED0662C737BDD00EBED36 /* CategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */; };
 		1C6ED0682C747BD600EBED36 /* PeriodCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED0672C747BD600EBED36 /* PeriodCoordinator.swift */; };
+		1C6ED06B2C76E55C00EBED36 /* ManageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6ED06A2C76E55C00EBED36 /* ManageCoordinator.swift */; };
 		1C991ECA2BFCD5E100A4FB4F /* PresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */; };
 		1C991ECE2C02306300A4FB4F /* ManageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */; };
 		1C991ED12C03B21400A4FB4F /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C991ED02C03B21400A4FB4F /* ManageView.swift */; };
@@ -70,6 +71,7 @@
 		1C6ED0612C71E19300EBED36 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		1C6ED0652C737BDD00EBED36 /* CategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoordinator.swift; sourceTree = "<group>"; };
 		1C6ED0672C747BD600EBED36 /* PeriodCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodCoordinator.swift; sourceTree = "<group>"; };
+		1C6ED06A2C76E55C00EBED36 /* ManageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCoordinator.swift; sourceTree = "<group>"; };
 		1C991EC92BFCD5E100A4FB4F /* PresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTransition.swift; sourceTree = "<group>"; };
 		1C991ECD2C02306300A4FB4F /* ManageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTableViewCell.swift; sourceTree = "<group>"; };
 		1C991ED02C03B21400A4FB4F /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				1C6ED05F2C71E10600EBED36 /* Coordinator.swift */,
 				1C6ED0632C737BA600EBED36 /* Home */,
 				1C6ED0642C737BCD00EBED36 /* Category */,
+				1C6ED0692C76E54D00EBED36 /* Manage */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -150,6 +153,14 @@
 				1C6ED0672C747BD600EBED36 /* PeriodCoordinator.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		1C6ED0692C76E54D00EBED36 /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				1C6ED06A2C76E55C00EBED36 /* ManageCoordinator.swift */,
+			);
+			path = Manage;
 			sourceTree = "<group>";
 		};
 		1C991EC82BFCD5D100A4FB4F /* Utils */ = {
@@ -435,6 +446,7 @@
 				1C6ED0512C31965D00EBED36 /* ManageDetailViewController.swift in Sources */,
 				1CC716212C1D7B8500E8F55A /* HomeTableViewCell.swift in Sources */,
 				1C06FB012BF3D643004F35BB /* TextManager.swift in Sources */,
+				1C6ED06B2C76E55C00EBED36 /* ManageCoordinator.swift in Sources */,
 				1C06FAFF2BF3D604004F35BB /* CategoryData.swift in Sources */,
 				1C991ED52C0896BE00A4FB4F /* ManageViewController.swift in Sources */,
 				1C6ED0562C71C2C000EBED36 /* ManageWholeTableViewCell.swift in Sources */,
