@@ -22,6 +22,7 @@ final class PeriodCoordinator: Coordinator {
     }
     
     func backHome() {
-        // TODO: - Back Home
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.start()
     }
 }
