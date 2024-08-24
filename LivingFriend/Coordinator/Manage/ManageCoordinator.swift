@@ -22,6 +22,7 @@ final class ManageCoordinator: Coordinator {
     }
     
     func showDetail() {
-        // TODO: - Show Detail
+        let manageDetailCoordinator = ManageDetailCoordinator(navigationController: navigationController)
+        manageDetailCoordinator.start()
     }
 }
