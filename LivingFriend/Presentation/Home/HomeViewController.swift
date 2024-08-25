@@ -11,6 +11,8 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     
+    weak var coordinator: HomeCoordinator?
+    
     private let homeView = HomeView()
     
     // MARK: - Life Cycles
@@ -44,6 +46,7 @@ final class HomeViewController: UIViewController {
     private func configure() {
         
         self.addConfigure()
+        self.setNavigationBar()
     }
     
     private func addConfigure() {
@@ -52,5 +55,9 @@ final class HomeViewController: UIViewController {
             categoryViewController.modalPresentationStyle = .overFullScreen
             self?.present(categoryViewController, animated: true)
         }
+    }
+    
+    private func setNavigationBar() {
+        self.title = ""
     }
 }
