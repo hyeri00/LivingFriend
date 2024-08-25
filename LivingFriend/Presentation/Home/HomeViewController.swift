@@ -51,9 +51,7 @@ final class HomeViewController: UIViewController {
     
     private func addConfigure() {
         self.homeView.didTapPlusButtonAction = { [weak self] in
-            let categoryViewController = UINavigationController(rootViewController: CategoryViewController())
-            categoryViewController.modalPresentationStyle = .overFullScreen
-            self?.present(categoryViewController, animated: true)
+            coordinator?.showCategory()
         }
     }
     
