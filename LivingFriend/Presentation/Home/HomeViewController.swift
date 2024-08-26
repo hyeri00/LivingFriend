@@ -51,7 +51,7 @@ final class HomeViewController: UIViewController {
     
     private func addConfigure() {
         self.homeView.didTapPlusButtonAction = { [weak self] in
-            coordinator?.showCategory()
+            self?.coordinator?.showCategory()
         }
     }
     
