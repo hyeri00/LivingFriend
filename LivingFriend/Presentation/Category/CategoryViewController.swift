@@ -11,6 +11,8 @@ final class CategoryViewController: UIViewController {
     
     // MARK: - Properties
     
+    weak var coordinator: CategoryCoordinator?
+    
     private let categoryView = CategoryView()
     
     // MARK: - Life Cycles
