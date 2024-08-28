@@ -11,6 +11,8 @@ final class PeriodViewController: UIViewController {
     
     // MARK: - Properties
     
+    weak var coordinator: PeriodCoordinator?
+    
     private let periodView = PeriodView()
     
     // MARK: - Life Cycles
