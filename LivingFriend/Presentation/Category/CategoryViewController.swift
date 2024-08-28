@@ -45,8 +45,7 @@ final class CategoryViewController: UIViewController {
     
     private func addConfigure() {
         self.categoryView.didTapColletionViewAction = { [weak self] in
-            let periodViewController = PeriodViewController()
-            self?.navigationController?.pushViewController(periodViewController, animated: true)
+            self?.coordinator?.showPeriod()
         }
     }
     
