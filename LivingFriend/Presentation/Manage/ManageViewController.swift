@@ -11,6 +11,8 @@ final class ManageViewController: UIViewController {
     
     // MARK: - Properties
     
+    weak var coordinator: ManageCoordinator?
+    
     private let manageView = ManageView()
     
     // MARK: - Life Cycles
