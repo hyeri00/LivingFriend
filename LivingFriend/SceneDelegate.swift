@@ -10,37 +10,18 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    var appCoordinator: AppCoordinator?
     
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let firstVC = UINavigationController(rootViewController: HomeViewController())
-        let secondVC = UINavigationController(rootViewController: ManageViewController())
-        
-        let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([firstVC, secondVC], animated: true)
-        
-        let attributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.black
-        ]
-        UITabBarItem.appearance().setTitleTextAttributes(attributes, for: .normal)
-        
-        firstVC.tabBarItem = UITabBarItem(title: "",
-                                          image: IconImages.home.image?.withTintColor(.lightGray, renderingMode: .alwaysOriginal),
-                                          selectedImage: IconImages.home.image?.withTintColor(.black, renderingMode: .alwaysOriginal))
-        
-        secondVC.tabBarItem = UITabBarItem(title: "",
-                                           image: IconImages.show.image?.withTintColor(.lightGray, renderingMode: .alwaysOriginal),
-                                           selectedImage: IconImages.show.image?.withTintColor(.black, renderingMode: .alwaysOriginal))
-        
-        window?.rootViewController = tabBarController
-        window?.makeKeyAndVisible()
+        appCoordinator = AppCoordinator(window: window)
+        appCoordinator?.start()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
