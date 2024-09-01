@@ -20,4 +20,8 @@ final class ManageDetailCoordinator: Coordinator {
         manageDetailViewController.coordinator = self
         self.navigationController.pushViewController(manageDetailViewController, animated: false)
     }
+    
+    func showPrevious() {
+        self.navigationController.popViewController(animated: true)
+    }
 }
