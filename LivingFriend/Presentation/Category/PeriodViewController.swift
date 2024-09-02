@@ -46,7 +46,7 @@ final class PeriodViewController: UIViewController {
     private func addConfigure() {
         self.periodView.didConfirmTapAction = {
             
-            ToastMessage().showToast(image: IconImages.check.image, message: "등록 완료!")
+            ToastMessage().showToast(image: IconImages.check.image, message: TextManager.period_success_message)
             
             DispatchQueue.main.async {
                 guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
