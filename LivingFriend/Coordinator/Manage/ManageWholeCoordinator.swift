@@ -20,4 +20,8 @@ final class ManageWholeCoordinator: Coordinator {
         manageWholeViewController.coordinator = self
         self.navigationController.pushViewController(manageWholeViewController, animated: false)
     }
+    
+    func showPrevious() {
+        self.navigationController.popViewController(animated: true)
+    }
 }
