@@ -11,6 +11,8 @@ final class ManageDetailViewController: UIViewController {
     
     // MARK: - Properties
     
+    weak var coordinator: ManageDetailCoordinator?
+    
     private let manageDetailView = ManageDetailView()
     
     // MARK: - Life Cycles
