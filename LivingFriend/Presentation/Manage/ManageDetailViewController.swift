@@ -63,7 +63,7 @@ final class ManageDetailViewController: UIViewController {
     
     @objc
     private func showPrevious() {
-        self.navigationController?.popViewController(animated: true)
+        self.coordinator?.showPrevious()
     }
 }
 
